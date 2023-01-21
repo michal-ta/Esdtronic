@@ -1,0 +1,40 @@
+@function rem($size, $context:16){
+        @return ($size/$context) +rem;
+}
+
+
+@mixin pf-vars() {
+
+        @each $var,
+        $value in $colors {
+                #{'--pf-' + $var}: $value;
+        }
+}
+
+
+
+//function using in scss to make useable var in css. 
+@function pf($color) {
+        @return var(--pf-+$color);
+
+}
+
+// function to color manipulation without definition of map get 
+
+
+@function color_change($function,$name,$amount){
+        $valid_functions: lighten,
+                darken,
+                saturate,
+                desaturate,
+                grayscale,
+                complement,
+                transparentize;
+        $color:map-get($colors,$name);
+        @if index($valid_functions,$function){
+        @return call($function,$color,$amount);
+        }@else{
+                @warn "invalid function";
+        }
+}
+
