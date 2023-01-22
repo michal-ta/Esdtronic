@@ -44,7 +44,7 @@
         display: flex;
         justify-content: space-around;
 
-        li{
+        li,a{
             font-size: 20px;
             font-weight: 700;
             color:color_change(darken,color_light,25%);
