@@ -7,6 +7,7 @@
     justify-content: space-around;
     background-color: color_change(transparentize,color_brand,0.12);
     position:fixed;
+    z-index: 250;
 
 
 
@@ -22,6 +23,10 @@
     svg{
         width: 20%;
         height: 80%;
+    
+        rect{
+            fill:color_change(transparentize,color_brand,0.12);
+        }
     }
 
     h4{
@@ -33,7 +38,7 @@
 }
 
 .navigation_buttons{
-    grid-column: 6/8;
+    grid-column: 6/9;
     
     ul{
         display: flex;
@@ -46,6 +51,10 @@
 
             &.active{
                 color:pf(color_light_accent1);
+            }
+
+            &:hover{
+                color: pf(color_light_accent2);
             }
         }
     }

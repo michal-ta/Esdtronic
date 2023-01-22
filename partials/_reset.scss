@@ -36,6 +36,7 @@ body {
     font-family: sans-serif;
     font-size: 100%;
     line-height: 1.5;
+    letter-spacing: 1.15px;
     text-rendering: optimizeSpeed;
 }
 
@@ -53,6 +54,13 @@ select {
     font: inherit;
 }
 
+a{
+    text-decoration: none;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
 
