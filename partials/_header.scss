@@ -15,9 +15,9 @@
 
 .navigation_logo{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    grid-column: 1/4;
+    grid-column: 2/5;
     height: inherit;
 
     svg{
