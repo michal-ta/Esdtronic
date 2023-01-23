@@ -101,6 +101,25 @@ li {
   width: 100%;
   height: 100vh;
   background-color: #c2c6ea;
+  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 90vh, 0 100%);
+          clip-path: polygon(0 15vh, 100% 0, 100% 90vh, 0 100%);
+  -webkit-transform: translateY(-3vh);
+          transform: translateY(-3vh);
+}
+
+.grid_basic.not_moved {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+}
+
+.grid_basic.white {
+  background-color: white;
+  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 90vh, 0 100%);
+          clip-path: polygon(0 15vh, 100% 0, 100% 90vh, 0 100%);
+  -webkit-transform: translateY(-2vh);
+          transform: translateY(-2vh);
 }
 
 li, a {
@@ -200,20 +219,20 @@ li, a {
 }
 
 .logo_bgr svg {
-  height: 80vh;
-  width: 80vw;
+  height: 70vh;
+  width: 70vw;
   position: fixed;
   top: 12%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  z-index: 0;
+  z-index: 1;
+  -webkit-filter: opacity(9%);
+          filter: opacity(9%);
 }
 
 .logo_bgr svg path {
   fill: #2d7bf7;
-  -webkit-filter: opacity(9%);
-          filter: opacity(9%);
 }
 
 .hero h2 {
@@ -339,24 +358,45 @@ li, a {
 }
 
 .aboutme_btn {
+  position: relative;
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6/7;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-column: 6/8;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  justify-self: flex-start;
+  width: 100%;
+  border: none;
+  color: var(--pf-color_light_accent1);
 }
 
-.services .grid_basic {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (10vw)[10];
-      grid-template-columns: repeat(10, 10vw);
-  -ms-grid-rows: (10vh)[10];
-      grid-template-rows: repeat(10, 10vh);
-  padding: 4.6875rem 3.125rem;
+.aboutme_btn::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
   width: 100%;
-  height: 100vh;
-  background-color: #c2c6ea;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.3;
+  transition: -webkit-transform 0.3;
+  transition: transform 0.3;
+  transition: transform 0.3, -webkit-transform 0.3;
+}
+
+.services {
+  width: 100%;
+  height: 115vh;
+  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 105vh, 0 100%);
+          clip-path: polygon(0 15vh, 100% 0, 100% 105vh, 0 100%);
 }
 
 .wraper {

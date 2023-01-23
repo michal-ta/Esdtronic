@@ -1,21 +1,25 @@
 .logo_bgr{
     svg {
     
-            height: 80vh;
-            width: 80vw;
+            height: 70vh;
+            width: 70vw;
             position: fixed;
             top: 12%;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 0;
+            z-index: 1;
+            filter: opacity(9%);
+            
             
     
             path {
                 fill: color_change(lighten, color_brand, 25%);
-                filter: opacity(9%);
+               
             }
         }
 }
+
+// -------------hero section ---------
 
 .hero{
     
@@ -115,22 +119,38 @@
 }
 
 .aboutme_btn {
+    position:relative;
     grid-row: 6/7;
-    align-self: flex-end;
+    grid-column: 6/8;
+    align-self:flex-start;
+    justify-self: flex-start;
+    width: 100%;
+    border: none;
+    color: pf(color_light_accent1);
+
+    &::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3
+    }
 }
 
 // ----------- services ----- 
 
 .services{
-    .grid_basic {
-            display: grid;
-            grid-template-columns: repeat(10, 10vw);
-            grid-template-rows: repeat(10, 10vh);
-            padding: rem(75) rem(50);
+    
             width: 100%;
-            height: 100vh;
-            background-color: color_change(lighten, color_light_accent3, 12%);
-        }
+            height: 115vh;
+            clip-path: polygon(0 15vh , 100% 0 , 100% 105vh , 0 100%);
+            
 }
 .wraper{
     display: grid;
