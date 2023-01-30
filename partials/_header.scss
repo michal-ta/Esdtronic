@@ -13,6 +13,11 @@
     &::after{
         display: none;
     }
+
+    a{
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 2.8px;
+    }
     
     
 
@@ -52,16 +57,15 @@
         justify-content: space-around;
 
         li,a{
-            font-size: 15px;
-            font-weight: 700;
-            color:color_change(darken,color_light,25%);
+            font-size: 18px;
+            color:color_change(lighten,color_brand,60%);
 
             &.active{
                 color:pf(color_light_accent1);
             }
 
             &:hover{
-                color: pf(color_light_accent2);
+                color: pf(color_accent_dark);
             }
         }
     }

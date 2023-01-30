@@ -1,6 +1,20 @@
 body{
     background-color: #c1c1;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span{
+    font-family: 'Bebas Neue', cursive;
+}
+
+p,a,li,ul{
+    font-family: 'Oswald', sans-serif; 
+}
+
 .grid_basic{
     display: grid;
     grid-template-columns: repeat(10,10vw);
@@ -37,7 +51,7 @@ body{
             position: absolute;
             top: 0;
             left: 0;
-            z-index: -2;
+            z-index: 0;
             clip-path: polygon(0% 8%, 100% 0%, 100% 92.5%, 0% 100%);
             scale: 1.1;
             
