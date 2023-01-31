@@ -1,0 +1,15 @@
+.footer {
+    
+}
+.footer_wraper ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size:10px;
+    color: pf(color_accent_dark);
+    background-color: #c1c1c1;
+    height: 100%;
+    width: 100vw;
+    padding: rem(15);
+}
+

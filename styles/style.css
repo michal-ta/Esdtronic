@@ -84,11 +84,12 @@ li {
 .theme {
   --pf-color_brand: #06419F;
   --pf-color_accent_dark: #041266;
-  --pf-color_light: #ececec;
+  --pf-color_light: #c7c7c7;
   --pf-color_light_accent1: #c89635;
   --pf-color_light_accent2: #e92223;
   --pf-color_light_accent3: #949BDB;
   --pf-color_second_bgr: #C4C6D1;
+  --pf-color_third_bgr: #d0e1fd;
 }
 
 body {
@@ -143,7 +144,7 @@ p, a, li, ul {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   -webkit-clip-path: polygon(0% 8%, 100% 0%, 100% 92.5%, 0% 100%);
           clip-path: polygon(0% 8%, 100% 0%, 100% 92.5%, 0% 100%);
   scale: 1.1;
@@ -783,13 +784,33 @@ li, a {
 }
 
 .contact {
+  padding-bottom: 0;
   -webkit-transform: translateY(-7%);
           transform: translateY(-7%);
 }
 
 .contact.grid_basic:after {
-  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 92.5%, 0 100%);
-          clip-path: polygon(0 10%, 100% 0, 100% 92.5%, 0 100%);
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
+.contact_wraper_general {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 7;
+  grid-column: 2/9;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 8;
+  grid-row: 2/10;
+  background-color: #d0e1fd;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+  padding: 1.5625rem;
+  height: 90%;
+  border-radius: 0.75rem;
 }
 
 form {
@@ -804,14 +825,14 @@ form {
 }
 
 .contact_form {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
-  grid-column: 2/6;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 6;
-  grid-row: 2/8;
   height: 100%;
   width: 80%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 8;
+  grid-row: 1/9;
 }
 
 .contact_form label {
@@ -821,27 +842,32 @@ form {
 }
 
 .contact_form input, .contact_form textarea {
-  background-color: #6670cc;
+  background-color: #95bcfb;
   margin: 0.125rem 0.9375rem;
+  border: none;
+  border-radius: 0.3125rem;
 }
 
 .contact_form textarea {
   display: inline-block;
   height: clamp(5rem, 9.375rem, 14.375rem);
+  font-size: clamp(0.625rem, 0.75rem, 0.9375rem);
 }
 
 .contact_capter_name {
   font-size: clamp(1.25rem, 1.875rem, 2.8125rem);
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2/4;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
   margin-left: 0.9375rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
   color: var(--pf-color_light_accent1);
+}
+
+.contact_capter_name2 {
+  font-size: clamp(1.25rem, 1.875rem, 2.8125rem);
+  color: var(--pf-color_light_accent1);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #name {
@@ -896,10 +922,15 @@ form {
   -ms-grid-row: 10;
   -ms-grid-row-span: 1;
   grid-row: 10/11;
-  width: 50%;
+  width: 35%;
   margin-top: 2rem;
   -ms-grid-column-align: center;
       justify-self: center;
+  height: 70%;
+  border-radius: 0.625rem;
+  border: none;
+  background-color: #c49334;
+  color: var(--pf-color_accent_dark);
 }
 
 .contact_or {
@@ -911,24 +942,38 @@ form {
   grid-row: 4/5;
   font-size: clamp(0.75rem, 1rem, 1.375rem);
   letter-spacing: 3px;
-  -webkit-transform: rotateX(12deg);
-          transform: rotateX(12deg);
   color: var(--pf-color_brand);
 }
 
 .contact_form_right {
   -ms-grid-column: 7;
-  -ms-grid-column-span: 2;
-  grid-column: 7/9;
-  -ms-grid-row: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 7/10;
+  -ms-grid-row: 1;
   -ms-grid-row-span: 6;
-  grid-row: 2/8;
-  height: 100%;
+  grid-row: 1/7;
+  height: 90%;
   width: 80%;
+  position: relative;
+  z-index: 3;
+}
+
+.contact_form_right::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 43%;
+  left: 28%;
+  z-index: -1;
+  background-color: #649cf8;
+  scale: 2.03;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .other_contact_wraper {
-  height: 80%;
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -937,13 +982,6 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding-left: 2.1875rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   letter-spacing: 2px;
 }
 
@@ -951,5 +989,92 @@ form {
   justify-self: flex-end;
   width: 30%;
   color: var(--pf-color_brand);
+}
+
+.social_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-transform: translateX(-2.75%);
+          transform: translateX(-2.75%);
+}
+
+.social_media a svg {
+  height: 28px;
+  fill: var(--pf-color_brand);
+}
+
+.basic_data {
+  height: 100%;
+}
+
+.basic_data ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  padding-left: 3.5rem;
+}
+
+.basic_data ul .descr {
+  color: var(--pf-color_light_accent1);
+  -webkit-transform: translateX(-18.5%);
+          transform: translateX(-18.5%);
+}
+
+.basic_data ul .phone_number::after {
+  content: url(../img/material-symbols_phone-in-talk-outline.svg);
+  position: absolute;
+  left: -2.625rem;
+}
+
+.basic_data ul .adress::after {
+  content: url(../img/ic_baseline-place.svg);
+  position: absolute;
+  left: -2.625rem;
+}
+
+.basic_data ul .social::after {
+  content: url(../img/material-symbols_screen-search-desktop-outline.svg);
+  position: absolute;
+  left: -2.625rem;
+}
+
+.basic_data ul .descr,
+.basic_data ul .phone_number,
+.basic_data ul .adress,
+.basic_data ul .social {
+  position: relative;
+}
+
+.footer_wraper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 10px;
+  color: var(--pf-color_accent_dark);
+  background-color: #c1c1c1;
+  height: 100%;
+  width: 100vw;
+  padding: 0.9375rem;
 }
 /*# sourceMappingURL=style.css.map */
