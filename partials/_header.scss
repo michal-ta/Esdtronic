@@ -44,7 +44,7 @@
     h4{
         padding-left: rem(25);
         font-size:28px;
-        color: pf('color_light');
+        color:color_change(lighten, color_brand, 60%);
         letter-spacing: rem(7,28);
     }
 }

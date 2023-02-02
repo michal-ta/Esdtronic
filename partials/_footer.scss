@@ -1,15 +1,34 @@
 .footer {
-    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: color_change(lighten, color_light, 25%);
+    background-color: color_change(darken, color_light, 44%);
 }
-.footer_wraper ul{
+
+.sub_footer {
+    padding: rem(25);
+    background-color: pf;
+    ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-size: rem(13);
+    }
+}
+.footer_author ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     font-size:10px;
-    color: pf(color_accent_dark);
-    background-color: #c1c1c1;
+    color: color_change(lighten,color_light,25%);
+    background-color:color_change(darken,color_light,22%);
     height: 100%;
     width: 100vw;
     padding: rem(15);
+
+    li{
+        padding-left: rem(48);
+    }
 }
 

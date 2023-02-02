@@ -399,6 +399,7 @@
     grid-template-rows: 0.5fr 1fr;
     height: max-content;
     transform: translateY(-5%);
+    padding-bottom: rem(25);
     
 
     &.grid_basic.white:after{
@@ -434,8 +435,8 @@
     img{
     
     display: inline-block;
-    width: auto;
-    height: 100%;
+    width: 70%;
+    height: 80%;
     position: relative;
         z-index: 4;
 
@@ -451,10 +452,13 @@
 }
 
 .contact{
-    padding-bottom: 0;
-    transform: translateY(-7%);
+    padding: 0;
+    top: -6%;
     &.grid_basic:after{
-        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+        top: -5%;
+        height: 105%;
+        
     }
 }
 
@@ -465,7 +469,7 @@
     display: grid;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(10,1fr);
-    padding: rem(25);
+    
     height: 90%;
     border-radius: rem(12);
 }
@@ -475,14 +479,15 @@ form {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(10, 1fr);
     padding:rem(32) 0 ;
-    height: 100%;
+    height: 80%;
     
 }
 .contact_form{
     height: 100%;
     width: 80%;
-    grid-column: 1/6;
-    grid-row: 1/9;
+    grid-column: 1/7;
+    grid-row: 1/8;
+    padding:rem(25);
     
     
 
@@ -573,31 +578,24 @@ form {
 }
 
 .contact_form_right{
-        grid-column: 7/10;
-        grid-row: 1/7;
-        height: 90%;
-        width: 80%;
-        position: relative;
-        z-index: 3;
-
-        &::after{
-            content: "";
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-            position: absolute;
-            top: 43%;
-            left: 28%;
-            z-index: -1;
-            background-color: color_change(darken,color_third_bgr,22%);
-            scale: 2.03;
-            border-radius: 0 rem(8) rem(8) 0;
-        }
+        grid-column: 7/11;
+        grid-row: 1/11;
+        height: 100%;
+        width: 100%;
+        background-color: color_change(lighten,color_brand,12%);
+        padding: rem(25);
 
     
 }
-.other_contact_wraper{
+
+.right_side_wraper{
+    display: flex;
+    flex-direction: column;
     height: 100%;
+
+}
+.other_contact_wraper{
+    height: 60%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -616,8 +614,7 @@ form {
 .social_media{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    transform: translateX(-2.75%);
+    justify-content:center;
 
     a svg{
         height: 28px;
@@ -631,14 +628,14 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100%;
+    height: 50%;
     padding-left: rem(56);
 
    
 
         .descr{
-        color: pf(color_light_accent1);
-        transform: translateX(-18.5%);
+        color: color_change(lighten,color_light_accent1,12%);
+        
         }
 
         
