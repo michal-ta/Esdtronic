@@ -23,24 +23,27 @@
     />
   </head>
   <nav class="navigation grid_basic not_moved">
-    <div class="navigation_logo">
-      <svg
-        width="98"
-        height="98"
-        viewBox="0 0 104 104"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="98" height="98" fill="#06419F" />
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M0 104H104V0H0V104ZM4 100V4H100V100H4ZM30.7453 83.1411H75.118V65.3374H50.2733V61.6687H71.3913V44.1718H50.2733V38.9693H75.118V20.8589H30.7453V83.1411Z"
-          fill="white"
-        />
-      </svg>
-      <h4>ESDtronic s.r.o</h4>
+    <div class="navigation_logo_wraper">
+      <div class="navigation_logo">
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 110 110"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="98" height="98" fill="#06419F" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 104H104V0H0V104ZM4 100V4H100V100H4ZM30.7453 83.1411H75.118V65.3374H50.2733V61.6687H71.3913V44.1718H50.2733V38.9693H75.118V20.8589H30.7453V83.1411Z"
+            fill="white"
+          />
+        </svg>
+        <h4>ESDtronic s.r.o</h4>
+      </div>
     </div>
+
     <div class="navigation_buttons">
       <ul>
         <li class="active"> <a href="#about_me">o nás</a></li>
@@ -52,10 +55,8 @@
       </ul>
     </div>
     <div class="navigation_language">
-      <ul>
-        <li><button>SVK</button></li>
-        <li><button>UA</button></li>
-      </ul>
+        <a href="index.html"><img src="./img/openmoji_flag-slovakia.png" alt="slovakia flag"></a>
+        <a href="index_ua.html"><img src="./img/openmoji_flag-ukraine.png" alt="ukraine flag"></a>
     </div>
   </nav>
 
@@ -80,6 +81,9 @@
       
       <h2>Odborné konzultácie a riešenia</h2>
       <h1>Správne fungovanie ESD prostredia</h1>
+      <div class="hero_img_section">
+        <img src="./img/PCBA.png" alt="Printed circuit board" loading="lazy">
+      </div>
       <div class="hero_text_section">
         <p>
           Potrebujete zaobstarať čoraz náročnejšie ESD podmienky pre Vaších
@@ -95,8 +99,8 @@
           poprípade doplňujúce znalosti o ESD podmienkach ?
         </p>
       </div>
-      <a href="#" class="btn btn_main">Služby</a>
-      <a href="#" class="btn btn_second">Kontakty</a>
+      <a href="#service" class="btn btn_main">Služby</a>
+      <a href="#contact" class="btn btn_second">Kontakty</a>
     </section>
     <section class="aboutme grid_basic white"id="about_me">
       <img
@@ -112,8 +116,9 @@
         <p> ESDtronic si do svojho vzniku doniesol 10rocnu skusenost v problematike ESD a od roku 2017 prislo k poznaniu, ze ESD a prienik na technicku cistotu je cesta pre bezpecne EPA prostredie. Pri rieseni problematiky ESD ochrany pracujeme podla standardov ANSI/ESD S20.20, radu noriem IEC 61340. 
 
         </p>
+        
       </div>
-      <a href="#" class="btn btn_second aboutme_btn">Mám zaujem o Vaše služby ?</a>
+      <a href="#contact" class="aboutme_btn">Chcem viac informácií</a>
     </section>
     <section class="services grid_basic" id="service">
       <div class="wraper">
@@ -146,36 +151,38 @@
       <div class="left_side picture_size picture_clean">
         <img src="./img/cleannes.jpeg" alt="particel measurement ">
       </div>
-      <div class="right_side clean_text card_text">
+      <div class="right_side clean_text card_text card_text_right">
         <span class="capter_name">Technická čistota</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dicta ducimus nostrum iure amet quasi atque odit cum eos eveniet? Quos, dolorem enim deleniti nesciunt autem fugit ratione? Veniam, obcaecati! Iste, enim dignissimos, quia perferendis delectus architecto adipisci, et iusto dolores dicta dolorem ipsa ducimus? Earum, at nulla quas placeat praesentium voluptatibus?</p>
-        
+        <a href="#contact" class="clean_btn btn_right">chcem viac informácií</a>
       </div>
-      <a href="#contact" class="clean_btn btn_right">chcem viac informácií</a>
+      
 
     </section>
     <section class="esd_audit grid_basic " id="esd_audit">
       <div class="right_side picture_size picture_clean">
         <img src="./img/ESD audits.jpeg" alt="particel measurement ">
       </div>
-      <div class="left_side esd_audit_text card_text_right">
+      <div class="left_side esd_audit_text card_text">
         <span class="capter_name">ESD audit linky</span>
         <p>Statická elektrina a kontaminácia produktu idú ruka v ruke. A práve preto prepájame ESD audit a technicku čistotu v elektrotechnickom priemysle do jedného celku.  Pre našich partnerov ponúkame okrem reportu aj riešenia po audite. Pri auditoch používame štandardy noriem  <strong>IEC, ANSI, VDA 19.1-2 </strong> a v neposlednom rade vaše zákaznické požiadavky. Na vašom ESD audite začíname pracovať ešte pred stretnutim. Zastávame postoj neustáleho napredovania a možnosť implementacie systémových postupov pre vás. </p>
+        <a href="#contact" class="btn_left audit_btn">chcem viac informácií</a>
         
       </div>
-      <a href="#" class="btn_left audit_btn">chcem viac informácií</a>
+      
     </section>
 
     <section class="esd_pausal grid_basic white" id="esd_pausal">
       <div class="left_side picture_size picture_clean">
         <img src="./img/signature.png" alt="particel measurement ">
       </div>
-      <div class="right_side esd_pausal_text card_text">
+      <div class="right_side esd_pausal_text card_text card_text_right">
         <span class="capter_name">ESD Paušál</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dicta ducimus nostrum iure amet quasi atque odit cum eos eveniet? Quos, dolorem enim deleniti nesciunt autem fugit ratione? Veniam, obcaecati! Iste, enim dignissimos, quia perferendis delectus architecto adipisci, et iusto dolores dicta dolorem ipsa ducimus? Earum, at nulla quas placeat praesentium voluptatibus?</p>
+        <a href="#contact" class=" clean_btn btn_right">chcem viac informácií</a>
         
       </div>
-      <a href="#contact" class=" clean_btn btn_right">chcem viac informácií</a>
+      
     </section>
     <section class="esd_trainings grid_basic " id="esd_trainings">
       <div class="right_side picture_size picture_clean">
@@ -189,20 +196,20 @@
         Školenie ponúka rokmi overené informácie usporiadané do logických celkov a súvislostí .
         Obsahom školenia je aj školiaci materiál ku ktorému sa možete vratiť v prípade potreby 
 </p>
-        
+        <a href="#contact" class=" clean_btn btn_left">chcem viac informácií</a>
       </div>
-      <a href="#" class=" clean_btn btn_left">chcem viac informácií</a>
+      
     </section>
     <section class="floor_audit grid_basic white" id="floor_audit">
       <div class="left_side picture_size picture_clean">
         <img src="./img/floors audit.jpeg" alt="particel measurement ">
       </div>
-      <div class="right_side esd_pausal_text card_text">
+      <div class="right_side esd_pausal_text card_text card_text_right">
         <span class="capter_name">audity podláh</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dicta ducimus nostrum iure amet quasi atque odit cum eos eveniet? Quos, dolorem enim deleniti nesciunt autem fugit ratione? Veniam, obcaecati! Iste, enim dignissimos, quia perferendis delectus architecto adipisci, et iusto dolores dicta dolorem ipsa ducimus? Earum, at nulla quas placeat praesentium voluptatibus?</p>
-        
+        <a href="#contact" class=" clean_btn btn_right">chcem viac informácií</a>
       </div>
-      <a href="#service" class=" clean_btn btn_right">chcem viac informácií</a>
+      
     </section>
     <section class="floor_rest grid_basic " id="floor_rest">
       <div class="right_side picture_size picture_clean">
@@ -211,9 +218,10 @@
       <div class="left_side floor_treat_text card_text">
         <span class="capter_name">obnova podhláh v EPA priestore</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dicta ducimus nostrum iure amet quasi atque odit cum eos eveniet? Quos, dolorem enim deleniti nesciunt autem fugit ratione? Veniam, obcaecati! Iste, enim dignissimos, quia perferendis delectus architecto adipisci, et iusto dolores dicta dolorem ipsa ducimus? Earum, at nulla quas placeat praesentium voluptatibus?</p>
+        <a href="#contact" class="floor_treat_btn btn_left">chcem viac informácií</a>
         
       </div>
-      <a href="#" class="floor_treat_btn btn_left">chcem viac informácií</a>
+      
     </section>
 
     <section class="partners grid_basic white" id="partners">
@@ -309,5 +317,5 @@
     </footer>
     
   </body>
-  
+  <script src="./JS/script.js"></script>
 </html>

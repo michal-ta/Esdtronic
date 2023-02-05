@@ -8,7 +8,7 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 0;
-            filter: opacity(9%);
+            filter: opacity(5%);
             
             
     
@@ -22,9 +22,13 @@
 
 .hero{
     
+    font-size: 100%;
     &::after{
         transform: translateY(-1%);
+
     }
+
+    
 
     h2{
         grid-column: 6/10;
@@ -47,15 +51,29 @@
     }
 }
 
+.hero_img_section{
+    grid-row: 2/8;
+    grid-column: 2/5;
+
+    img{
+        height: 100%;
+        width: 100%;
+        box-shadow: -10px 10px 5px color_change(transparentize,color_brand,0.1);
+        transform: perspective(12rem) rotateY(4deg);
+        filter: grayscale(75%);
+    }
+}
+
 .hero_text_section{
     grid-column: 6/10;
     grid-row: 4/7;
     background-color: color_change(lighten, color_brand, 28%);
-    padding: rem(25) rem(39);
+    padding: rem(25) rem(25);
     font-size: 15px;
     height: 100%;
     font-weight: 500;
     filter: drop-shadow(1px 1px 1px pf(color_light_accent1));
+    height: 110%;
 }
 
 
@@ -97,19 +115,19 @@
 .aboutme{
 
     img{
-        grid-column: 2/5;
-        grid-row: 2/8;
-        width: 95%;
-        height: auto;
+        grid-column: 2/6;
+        grid-row: 2/7;
+        width: 90%;
+        height: 97%;
         display: inline-block;
-        align-self: center;
-        justify-self: center;
+        align-self: flex-start;
+        justify-self: flex-start;
         
     }
 }
 
 .aboutme_description{
-    grid-column: 6/9;
+    grid-column: 6/10;
     grid-row: 2/7;
 
     h5{
@@ -124,7 +142,7 @@
     position:relative;
     grid-row: 6/7;
     grid-column: 6/8;
-    align-self:flex-start;
+    align-self:center;
     justify-self: flex-start;
     width: 100%;
     border: none;
@@ -157,7 +175,8 @@
 }
 .wraper{
     display: grid;
-    grid-column: 2/9;
+    width: 98%;
+    grid-column: 2/10;
     grid-row: 2/9;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 35vh 35vh;
@@ -208,6 +227,14 @@
     grid-row: 3/8;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    a{
+        justify-self: flex-end;
+        align-self: flex-end;
+        padding-right: 0;
+    }
 
     &.picture_size {
             grid-row: 2/8;
@@ -219,10 +246,18 @@
 }
 
 .right_side{
-    grid-column: 6/9;
+    grid-column: 6/10;
     grid-row: 2/7;
     height: 100%;
     width: 100%;
+    display: flex;
+        flex-direction: column;
+    
+        a{
+            justify-self: flex-end;
+            align-self: flex-start;
+            
+        }
 
     &.picture_size{
         grid-row: 2/8;
@@ -237,13 +272,13 @@
 }
 
 .card_text p{
-    height: 80%;
+    height: max-content;
     grid-row: 3/7;
     background-color: color_change(lighten,color_brand,28%);
-    font-size: clamp(rem(14), rem(17) ,rem(25));
+    font-size: clamp(rem(14), rem(15) ,rem(25));
     line-height: clamp(1.45rem, 1.79rem, 2.05rem);
     padding: rem(40);
-    border-radius: rem(40) rem(40) rem(75) 0 ;
+    border-radius: rem(40) rem(40) 0 rem(75) ;
     box-shadow: 1.5px 1.5px 4px color_change(darken,color_brand,12%);
     position: relative;
 
@@ -253,7 +288,7 @@
     
 }
 .card_text_right p{
-    border-radius: rem(40) rem(40)  0 rem(75) ;
+    border-radius: rem(40) rem(40)  rem(75) 0 ;
     box-shadow: 1.5px 1.5px 4px color_change(darken, color_brand, 12%);
     position: relative;
     
@@ -309,9 +344,10 @@
 
 .btn_left{
         position: relative;
-        grid-column: 2/4;
+        grid-column: 3/6;
         grid-row:7/8;
         align-self: center;
+        justify-self: center;
         text-decoration: none;
         color: color_change(darken, color_light_accent1, 2%);
         font-weight: 600;
@@ -396,14 +432,14 @@
 }
 
 .partners{
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-rows: repeat(3,10vh);
     height: max-content;
     transform: translateY(-5%);
     padding-bottom: rem(25);
     
 
     &.grid_basic.white:after{
-        clip-path: polygon(0 16%, 100% 0, 100% 80%, 0 100%);
+        clip-path: polygon(0 23%, 100% 0, 100% 80%, 0 100%);
     }
 
     h5{
@@ -464,13 +500,11 @@
 
 .contact_wraper_general{
     grid-column: 2/9;
-    grid-row: 2/10;
+    grid-row: 2/9;
     background-color: color_change(lighten,color_brand,58%);
     display: grid;
-    grid-template-columns: repeat(10,1fr);
-    grid-template-rows: repeat(10,1fr);
-    
-    height: 90%;
+    grid-template-columns: repeat(8,10vw);
+    grid-template-rows: repeat(7,10vh);
     border-radius: rem(12);
 }
 
@@ -485,7 +519,7 @@ form {
 .contact_form{
     height: 100%;
     width: 80%;
-    grid-column: 1/7;
+    grid-column: 1/5;
     grid-row: 1/8;
     padding:rem(25);
     
@@ -505,7 +539,8 @@ form {
     }
     textarea{
         display: inline-block;
-        height:clamp(rem(80), rem(150), rem(230));
+        min-height: rem(80);
+        overflow-y: auto;
         font-size: clamp(rem(10), rem(12), rem(15));
     }
 
@@ -514,7 +549,6 @@ form {
 .contact_capter_name{
     font-size:clamp(rem(20), rem(30), rem(45));
     margin-left: rem(15);
-    align-self: flex-end;
     color: pf(color_light_accent1);
     
 
@@ -578,8 +612,8 @@ form {
 }
 
 .contact_form_right{
-        grid-column: 7/11;
-        grid-row: 1/11;
+        grid-column: 5/10;
+        grid-row: 1/8;
         height: 100%;
         width: 100%;
         background-color: color_change(lighten,color_brand,12%);
