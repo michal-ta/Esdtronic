@@ -15,20 +15,19 @@
         font-size: rem(13);
         letter-spacing: 1.75px;
     }
-
+    
+    .btn{
+        font-size: rem(14);
+    }
     .hero_img_section{
 
         img{
-            height: 85%;
-            width: 85%;
+            height: 92%;
+            width: 92%;
         }
     }
 
-    .btn{
-        padding: rem(10) 0;
-        font-size: rem(13);
-
-    }
+    
 
     .btn_left{
         margin-top: rem(15);
@@ -69,12 +68,17 @@
         grid-row: 2/9;
         height: max-content;
 
-    
+        & img{
+            height: 100%;
+            padding: rem(45) rem(15);
+        }
     }
-    .esd_pausal .left_side{
+    .picture_clean img{
         height: 100%;
-        width: 100%;
+        padding: rem(15) rem(0);
     }
+
+    
 
 //ESD audit ----- 
     .audit_btn{
@@ -98,19 +102,28 @@
         
         
     }
-
+        .picture_training img {
+            height: 80%;
+        }
     .picture_clean{
         img{
             height: 80%;
+
         }
     }
+
+        .picture_floor_rest{
+            img{
+                padding: rem(45) rem(15);
+                height:85%;
+            }
+        }
+        
 }
 
 @media  only screen and (max-width:1124px){
 
-    .hero_img_section{
-        grid-column: 2/6;
-    }
+    
     .contact_form {
             height: 100%;
             grid-row: 1/9;
@@ -131,24 +144,94 @@
 
     }
         
+    .picture_esd_audit img{
+        padding: rem(65) rem(25)
+    }
+    
+    .picture_training {
         
+        img{
+        padding: rem(45) rem(15);
+        margin-top: rem(35);
+
+        
+    }
+    }
 }
 
-@media only screen and (max-width:950px){
+@media screen and (max-width: 980px){
     form{
         display: flex;
         flex-direction: column;
         padding-top: 0;
-        font-size: rem(14);
+        font-size: 14px;
     }
 
     #send{
         align-self: center;
     }
     
+    .hero h1{
+        line-height: 1;
+    }
+
+    .picture_clean img{
+        height: 100%;
+        padding: rem(65) 0;
+    }
+
+    .picture_esd_audit{
+        width: 80%;
+        justify-self: flex-end;
+
+        img{
+            height: 80%
+        }
+    }
+
+    .esd_audit_text{
+        width: 135%;
+    }
+
 }
 
-@media only screen and (max-width:850px){
+@media (max-width:945px){
+
+
+    .grid_basic{
+        grid-template-rows: repeat(10,7.5vh);
+    }
+
+    .esd_trainings{
+        grid-template-rows: repeat(10, 8vh);
+    }
+    .contact{
+        grid-template-rows: repeat(10, 10vh);;
+    }
+    .partners{
+        grid-template-rows: repeat(3,10vh);
+    }
+
+    .navigation{
+        height: 10vh;;
+    }
+    .picture_floor_rest {
+        
+            img {
+                width: 75%;
+                
+                align-self: flex-end;
+                
+            }
+        }
+     .floor_treat_text{
+        width: 115%;
+     }
+
+
+}
+
+@media (max-width:850px){
     .navigation_language a{
         width: 35%;
 
@@ -177,6 +260,40 @@
         }
     }
 
+    .card_text{
+        grid-column: 2/10;
+        grid-row: 2/5;
+        p {
+                border-radius: rem(40) rem(40) rem(45) 0;
+            }
+    }
+
+    .esd_audit_text,
+    .floor_treat_text{
+        width: 100%;
+    }
+    .left_side.picture_size,
+    .right_side.picture_size{
+        
+        grid-column: 2/6;
+        grid-row: 6/11;
+        height: 100%;
+
+        
+
+        img{
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin-top: rem(45);
+        }
+    }
+
+    .left_side.picture_size{
+        grid-column: 6/10;
+    }
+
+
     .navigation_language{
         grid-column: 6/8;
         grid-row: 1/2;
@@ -186,5 +303,65 @@
             font-size: rem(39);
         }
 
+    }
+
+    .btn_left,
+    .btn_right{
+        margin-top: rem(75);
+        text-align: center;
+    }
+        
+}
+
+
+@media (max-width:850px) {
+    .hero_text_section{
+        height: max-content;
+        grid-row: 3/7;
+        margin-top: 6%;
+    }
+
+    .picture_flor_audit 
+    img{
+        padding: rem(45) rem(15);
+    }
+
+}
+
+@media (max-width:736px){
+    .hero h1{
+        font-size: rem(36);
+        line-height: 1.25;
+    }
+    .hero_text_section{
+        margin-top: 12%;
+        font-size: rem(13);
+        line-height: 1.55;
+    }
+
+    .aboutme img{
+        grid-row: 2/8;
+        padding: rem(45) rem(12);
+        
+    }
+
+    .aboutme_btn{
+        grid-row: 8/9;
+        grid-column: 5/7;
+    }
+    .services{
+        height: 100vh;
+    }
+    .wraper{
+        gap: 1.3rem;
+        grid-template-rows: 30vh 30vh;
+    }
+    .image_container{
+        height: 85%;
+    }
+
+    .overlay_text{
+        color: white;
+        font-size: rem(14);
     }
 }
