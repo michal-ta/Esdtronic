@@ -14,7 +14,11 @@
     flex-direction: row;
     justify-content: space-between;
     font-size: rem(13);
+    flex-wrap: wrap;
     }
+        li {
+            padding-left: rem(15);
+        }
 }
 .footer_author ul{
     display: flex;
