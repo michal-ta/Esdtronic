@@ -4,6 +4,7 @@
     flex-direction: column;
     color: color_change(lighten, color_light, 25%);
     background-color: color_change(darken, color_light, 44%);
+    width: 100%;
 }
 
 .sub_footer {

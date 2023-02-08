@@ -824,6 +824,7 @@ form {
   flex-direction: column;
   color: #fdfdfd;
   background-color: #484953;
+  width: 100%;
 }
 
 .sub_footer {
@@ -1246,9 +1247,29 @@ form {
   .sub_footer ul {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   .sub_footer li {
     padding-top: 0.9375rem;
+    letter-spacing: 1.8px;
+  }
+  .contact {
+    grid-template-rows: repeat(12, 11vh);
+  }
+  .contact_wraper_general {
+    grid-column: 2/10;
+    grid-row: 2/12;
+  }
+  .contact_form_right {
+    grid-column: 1/9;
+    grid-row: 9/11;
+    width: 100%;
+    height: 100%;
+  }
+  .contact_form {
+    grid-column: 1/9;
+    grid-row: 1/6;
+    width: 100%;
   }
 }
 @media (max-width: 543px) {
@@ -1344,6 +1365,12 @@ form {
   .aboutme_btn {
     grid-row: 10/13;
   }
+  .floor_rest {
+    grid-template-rows: repeat(13, 11vh);
+  }
+  .floor_rest .picture_floor_rest {
+    grid-row: 8/13;
+  }
 }
 @media (max-width: 375px) {
   .navigation_logo svg {
@@ -1376,7 +1403,7 @@ form {
     grid-template-rows: repeat(14, 11vh);
   }
   .floor_rest .picture_floor_rest {
-    grid-row: 11/15;
+    grid-row: 10/13;
   }
   .hero h1 {
     font-size: 2.125rem;
