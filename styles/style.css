@@ -1252,6 +1252,9 @@ form {
   }
 }
 @media (max-width: 543px) {
+  .navigation_logo_wraper {
+    grid-column: 2/7;
+  }
   .card_text p {
     padding: 1.375rem;
     border-radius: 0.6875rem;
@@ -1305,6 +1308,9 @@ form {
   }
 }
 @media (max-width: 480px) {
+  .navigation_logo h4 {
+    font-size: 1.125rem;
+  }
   .aboutme img {
     display: none;
   }
@@ -1337,6 +1343,15 @@ form {
   }
   .aboutme_btn {
     grid-row: 10/13;
+  }
+}
+@media (max-width: 375px) {
+  .navigation_logo svg {
+    width: 15%;
+  }
+  .navigation_logo h4 {
+    font-size: 0.8125rem;
+    padding-left: 0.625rem;
   }
 }
 @media (max-width: 360px) {

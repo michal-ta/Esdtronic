@@ -545,6 +545,10 @@
 
 @media (max-width:543px){
 
+    .navigation_logo_wraper{
+        grid-column: 2/7;
+    }
+
     .card_text{
         p{
             padding: rem(22);
@@ -614,6 +618,11 @@
 
 }
 @media (max-width:480px){
+    .navigation_logo{
+        h4{
+            font-size: rem(18);
+        }
+    }
 
     .aboutme 
     
@@ -661,7 +670,16 @@
 }
 
 @media (max-width:375px){
-   
+.navigation_logo {
+
+        svg{
+            width: 15%;
+        }
+        h4 {
+            font-size: rem(13);
+            padding-left: rem(10);
+        }
+    }
 }
 @media (max-width:360px) {
 
