@@ -40,8 +40,8 @@
 
 
     svg{
-        width: 10%;
-        height: 25%;
+        max-width: 10%;
+        max-height: 25%;
     
         rect{
             fill:color_change(transparentize,color_brand,0.12);

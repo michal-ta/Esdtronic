@@ -18,8 +18,8 @@ p,a,li,ul{
 .grid_basic{
     display: grid;
     grid-template-columns: repeat(10,10vw);
-    grid-template-rows: repeat(10,10vh);
-    padding: rem(75) 0;
+    grid-template-rows: min(80vh);
+    padding: rem(135) 0;
     min-width: 100%;
     height: 100%;
     position:relative;
@@ -73,5 +73,7 @@ li,a{
     list-style: none;
     
 }
-
+.navigation_buttons_burger{
+    display: none;
+}
 

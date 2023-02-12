@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <div class="navigation_buttons">
+    <div class="navigation_buttons ">
       <ul>
         <li class="active"> <a href="#about_me">o nás</a></li>
         <li> <a href="#service">služby</a> </li>
@@ -55,6 +55,11 @@
         <li><a href="#contact">kontakt</a> </li>
       </ul>
     </div>
+    <button class="navigation_buttons_burger ">
+      <span class="burger1"></span>
+      <span class="burger2"></span>
+      <span class="burger3"></span>
+    </button>
     <div class="navigation_language">
         <a href="index.html"><img src="./img/openmoji_flag-slovakia.png" alt="slovakia flag"></a>
         <a href="index_ua.html"><img src="./img/openmoji_flag-ukraine.png" alt="ukraine flag"></a>
@@ -79,157 +84,178 @@
       </svg>
     </div>
     <section class="hero grid_basic">
-      
-      <h2>Odborné konzultácie a riešenia</h2>
-      <h1>Správne fungovanie ESD prostredia</h1>
-      <div class="hero_img_section">
-        <img src="./img/PCBA.png" alt="Printed circuit board" loading="lazy">
-      </div>
-      <div class="hero_text_section">
-        <p>
-          Potrebujete zaobstarať čoraz náročnejšie ESD podmienky pre Vaších
-          zákazníkov ?
-        </p>
-        <p>Vaša podlaha vo výrobnej hale ,už nevyhovuje ESD podmienkam ?</p>
-        <p>
-          Požadujú od Vás periodické merania alebo nápravné opatrenia na
-          splnenie podmienok technickej čistoty ?
-        </p>
-        <p>
-          Plánujete ESD audity alebo potrebujete školenie pre tieto audity,
-          poprípade doplňujúce znalosti o ESD podmienkach ?
-        </p>
-      </div>
-      <a href="#service" class="btn btn_main">Služby</a>
-      <a href="#contact" class="btn btn_second">Kontakty</a>
-    </section>
-    <section class="aboutme grid_basic white"id="about_me">
-      <img
-        src="./img/john-schnobrich-FlPc9_VocJ4-unsplash.jpg"
-        alt="picture of PC "
-      />
-      <div class="aboutme_description" >
-        <h5>O nás</h5>
-        <p>
-          Sme Slovenskou spoločnosťou pôsobiacou na Slovenskom a zahraničnom trhu. Naši nadšenci pre ESD začali  vnímať a implementovať prvky antistatickej ochrany pred elektrostatickým výbojom ESD v spojeni prvrkou technickej cistoty podla VDA 19.1-2.
-          Zákazníka berieme ako svojho partnera  a preto korektnost ,a transparentonosť  voci partnerom je pre nas klučová </p>
-
-        <p> ESDtronic si do svojho vzniku doniesol 10rocnu skusenost v problematike ESD a od roku 2017 prislo k poznaniu, ze ESD a prienik na technicku cistotu je cesta pre bezpecne EPA prostredie. Pri rieseni problematiky ESD ochrany pracujeme podla standardov ANSI/ESD S20.20, radu noriem IEC 61340. 
-
-        </p>
-        
-      </div>
-      <a href="#contact" class="aboutme_btn">Chcem viac informácií</a>
-    </section>
-    <section class="services grid_basic" id="service">
-      <div class="wraper">
-        <div class="image_container">
-          <a href="#technical_clean"><img src="./img/esd pausal.jpg" alt="cleannes lever" class="service_img"></a>
-          <div class="overlay">
-          <p class="overlay_text">Technická čistota</p>
+      <div class="content_wraper">
+          <div class="align_wraper">
+            <div class="text_wraper">
+              <h2>Odborné konzultácie a riešenia</h2>
+              <h1>Správne fungovanie ESD prostredia</h1>
+              
+              <div class="hero_text_section">
+                <p>
+                  Potrebujete zaobstarať čoraz náročnejšie ESD podmienky pre Vaších
+                  zákazníkov ?
+                </p>
+                <p>Vaša podlaha vo výrobnej hale ,už nevyhovuje ESD podmienkam ?</p>
+                <p>
+                  Požadujú od Vás periodické merania alebo nápravné opatrenia na
+                  splnenie podmienok technickej čistoty ?
+                </p>
+                <p>
+                  Plánujete ESD audity alebo potrebujete školenie pre tieto audity,
+                  poprípade doplňujúce znalosti o ESD podmienkach ?
+                </p>
+              </div>
+            </div>
+            <div class="img_wraper">
+              <div class="hero_img_section">
+                <img src="./img/PCBA.png" alt="Printed circuit board" loading="lazy">
+              </div>
           </div>
-      </div>
-        <div class="image_container"><a href="#esd_audit"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
-          <p class="overlay_text">ESD audit liniek</p>
-        </div></div>
-        <div class="image_container">
-          <a href="#esd_pausal"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
-          <p class="overlay_text">ESD paušál</p>
-        </div></div>
-        <div class="image_container"><a href="#esd_trainings"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
-          <p class="overlay_text">školenia ESD a technickej čistoty</p>
-        </div></div>
-        <div class="image_container"><a href="#esd_trainings"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
-          <p class="overlay_text">Audity podláh</p>
-        </div></div>
-        <div class="image_container"><a href="#floor_audit"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
-          <p class="overlay_text">Obnova podláh v EPA priestore</p>
-        </div></div>
+          </div>
+          <div class="hero_buttons_wraper">
+          <a href="#service" class="btn btn_main">Služby</a>
+          <a href="#contact" class="btn btn_second">Kontakty</a>
+          </div>
+        </div>
+        
+      </section>
+      <section class="aboutme grid_basic white"id="about_me">
+        <div class="content_wraper aboutme_content_wraper">
+          <div class="img_wraper">
+          <img
+            src="./img/john-schnobrich-FlPc9_VocJ4-unsplash.jpg"
+            alt="picture of PC "
+          />
+          </div>
+          <div class="aboutme_description" >
+            <h5>O nás</h5>
+            <p>
+              Sme Slovenskou spoločnosťou pôsobiacou na Slovenskom a zahraničnom trhu. Naši nadšenci pre ESD začali  vnímať a implementovať prvky antistatickej ochrany pred elektrostatickým výbojom ESD v spojeni prvrkou technickej cistoty podla VDA 19.1-2.
+              Zákazníka berieme ako svojho partnera  a preto korektnost ,a transparentonosť  voci partnerom je pre nas klučová </p>
+
+            <p> ESDtronic si do svojho vzniku doniesol 10rocnu skusenost v problematike ESD a od roku 2017 prislo k poznaniu, ze ESD a prienik na technickú cistotu je cesta pre bezpecne EPA prostredie. Pri riešení problematiky ESD ochrany pracujeme podla štandartov ANSI/ESD S20.20, radu noriem IEC 61340. 
+
+            </p>
+            
+            <a href="#contact" class="aboutme_btn">Chcem viac informácií</a>
+          </div>
+        </div>
+      </section>
+      <section class="services grid_basic" id="service">
+        <div class="wraper">
+          <div class="image_container">
+            <a href="#technical_clean"><img src="./img/esd pausal.jpg" alt="cleannes lever" class="service_img"></a>
+            <div class="overlay">
+            <p class="overlay_text">Technická čistota</p>
+            </div>
+        </div>
+          <div class="image_container"><a href="#esd_audit"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
+            <p class="overlay_text">ESD audit liniek</p>
+          </div></div>
+          <div class="image_container">
+            <a href="#esd_pausal"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
+            <p class="overlay_text">ESD paušál</p>
+          </div></div>
+          <div class="image_container"><a href="#esd_trainings"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
+            <p class="overlay_text">školenia ESD a technickej čistoty</p>
+          </div></div>
+          <div class="image_container"><a href="#esd_trainings"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
+            <p class="overlay_text">Audity podláh</p>
+          </div></div>
+          <div class="image_container"><a href="#floor_audit"><img src="./img/esd pausal.jpg" alt="" class="service_img"></a><div class="overlay">
+            <p class="overlay_text">Obnova podláh v EPA priestore</p>
+          </div></div>
+          </div>
+        </div>
+      </section>
+      <section class="technical_clean grid_basic white" id="technical_clean">
+        <div class="spec_service_content_wraper">
+          <div class="left_side picture_size picture_clean">
+            <img src="./img/cleannes.jpeg" alt="particel measurement ">
+          </div>
+          <div class="right_side clean_text card_text card_text_right">
+            <span class="capter_name">Technická čistota</span>
+            <p>Garantujeme profesionálne meranie , pravidelné kalibrovanými prístrojmi . Ak sa jedná o špeciálnu požiadavku od Vášho zakazníka, alebo len meranie pre Vašu informáciu , je našou pripritou poskytnuť relevantné a realné údaje. Sučastou tejto služby je aj finálná správa , ktorú budete môct použiť ako evidenciu počas zákazníckych, certifikačných, ale aj  k iným typom auditov. </p>
+            <a href="#contact" class="general_btn btn_right">chcem viac informácií</a>
+          </div>
+          </div>
+        
+
+      </section>
+      <section class="esd_audit grid_basic " id="esd_audit">
+        <div class="spec_service_content_wraper oposite">
+          <div class="right_side picture_size picture_esd_audit">
+            <img src="./img/ESD audits.jpeg" alt="particel measurement ">
+          </div>
+          <div class="left_side esd_audit_text card_text">
+            <span class="capter_name">ESD audit linky</span>
+            <p>Statická elektrina a kontaminácia produktu idú ruka v ruke. A práve preto prepájame ESD audit a technicku čistotu v elektrotechnickom priemysle do jedného celku.  Pre našich partnerov ponúkame okrem reportu aj riešenia po audite. Pri auditoch používame štandardy noriem  <strong>IEC, ANSI, VDA 19.1-2 </strong> a v neposlednom rade vaše zákaznické požiadavky. Na vašom ESD audite začíname pracovať ešte pred stretnutim. Zastávame postoj neustáleho napredovania a možnosť implementacie systémových postupov pre vás. </p>
+            <a href="#contact" class="btn_left general_btn audit_btn">chcem viac informácií</a>
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="esd_pausal grid_basic white" id="esd_pausal">
+        <div class="spec_service_content_wraper">
+          <div class="left_side picture_size picture_pausal">
+            <img src="./img/signature.png" alt="particel measurement ">
+          </div>
+          <div class="right_side esd_pausal_text card_text card_text_right">
+            <span class="capter_name">ESD Paušál</span>
+            <p>Sme partnerom pre vás v ESD a  technickej čistote od A po Z .<br>Urobíme všetko preto aby spolupráca ušita na mieru pre Vás , dosiahla všetky stanovené požiadavky<br>
+            Viac informácií o tejto službe sa dozviete osobne, na dohodnutom  stretnutí, alebo nás kontaktujte </p>
+            <a href="#contact" class=" general_btn btn_right">chcem viac informácií</a>
+            
+          </div>
+        </div>
+    </section>
+    <section class="esd_trainings grid_basic " id="esd_trainings">
+      <div class="spec_service_content_wraper oposite">
+        <div class="right_side picture_size picture_training">
+          <img src="./img/krakenimages-376KN_ISplE-unsplash.jpg" alt="training picture ">
+        </div>
+        <div class="left_side training_text card_text">
+          <span class="capter_name">školenia ESD a technickej čistoty</span>
+          <p>S partnerom cleanliness certification center ponukame specializovane skolenia ktore prepajaju ESD
+          a technicku cistotu do jedneho celku. <br>
+          V oboch pripadoch skolenie je to spojene s poradenstvom aj po skoleni. 
+          Školenie ponúka rokmi overené informácie usporiadané do logických celkov a súvislostí .
+          Obsahom školenia je aj školiaci materiál ku ktorému sa možete vratiť v prípade potreby 
+          </p>
+          <a href="#contact" class=" general_btn btn_left">chcem viac informácií</a>
         </div>
       </div>
     </section>
-    <section class="technical_clean grid_basic white" id="technical_clean">
-      <div class="left_side picture_size picture_clean">
-        <img src="./img/cleannes.jpeg" alt="particel measurement ">
-      </div>
-      <div class="right_side clean_text card_text card_text_right">
-        <span class="capter_name">Technická čistota</span>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dicta ducimus nostrum iure amet quasi atque odit cum eos eveniet? Quos, dolorem enim deleniti nesciunt autem fugit ratione? Veniam, obcaecati! Iste, enim dignissimos, quia perferendis delectus architecto adipisci, et iusto dolores dicta dolorem ipsa ducimus? Earum, at nulla quas placeat praesentium voluptatibus?</p>
-        <a href="#contact" class="general_btn btn_right">chcem viac informácií</a>
-      </div>
-      
-
-    </section>
-    <section class="esd_audit grid_basic " id="esd_audit">
-      <div class="right_side picture_size picture_esd_audit">
-        <img src="./img/ESD audits.jpeg" alt="particel measurement ">
-      </div>
-      <div class="left_side esd_audit_text card_text">
-        <span class="capter_name">ESD audit linky</span>
-        <p>Statická elektrina a kontaminácia produktu idú ruka v ruke. A práve preto prepájame ESD audit a technicku čistotu v elektrotechnickom priemysle do jedného celku.  Pre našich partnerov ponúkame okrem reportu aj riešenia po audite. Pri auditoch používame štandardy noriem  <strong>IEC, ANSI, VDA 19.1-2 </strong> a v neposlednom rade vaše zákaznické požiadavky. Na vašom ESD audite začíname pracovať ešte pred stretnutim. Zastávame postoj neustáleho napredovania a možnosť implementacie systémových postupov pre vás. </p>
-        <a href="#contact" class="btn_left general_btn audit_btn">chcem viac informácií</a>
-        
-      </div>
-      
-    </section>
-
-    <section class="esd_pausal grid_basic white" id="esd_pausal">
-      <div class="left_side picture_size picture_pausal">
-        <img src="./img/signature.png" alt="particel measurement ">
-      </div>
-      <div class="right_side esd_pausal_text card_text card_text_right">
-        <span class="capter_name">ESD Paušál</span>
-        <p>Sme partnerom pre vás v ESD a  technickej čistote od A po Z .<br>Urobíme všetko preto aby spolupráca ušita na mieru pre Vás , dosiahla všetky stanovené požiadavky<br>
-        Viac informácií o tejto službe sa dozviete osobne, na dohodnutom  stretnutí, alebo nás kontaktujte </p>
-        <a href="#contact" class=" general_btn btn_right">chcem viac informácií</a>
-        
-      </div>
-      
-    </section>
-    <section class="esd_trainings grid_basic " id="esd_trainings">
-      <div class="right_side picture_size picture_training">
-        <img src="./img/krakenimages-376KN_ISplE-unsplash.jpg" alt="training picture ">
-      </div>
-      <div class="left_side training_text card_text">
-        <span class="capter_name">školenia ESD a technickej čistoty</span>
-        <p>S partnerom cleanliness certification center ponukame specializovane skolenia ktore prepajaju ESD
-        a technicku cistotu do jedneho celku. <br>
-        V oboch pripadoch skolenie je to spojene s poradenstvom aj po skoleni. 
-        Školenie ponúka rokmi overené informácie usporiadané do logických celkov a súvislostí .
-        Obsahom školenia je aj školiaci materiál ku ktorému sa možete vratiť v prípade potreby 
-</p>
-        <a href="#contact" class=" general_btn btn_left">chcem viac informácií</a>
-      </div>
-      
-    </section>
     <section class="floor_audit grid_basic white" id="floor_audit">
-      <div class="left_side picture_size picture_flor_audit">
-        <img src="./img/floors audit.jpeg" alt="particel measurement ">
-      </div>
-      <div class="right_side esd_pausal_text card_text card_text_right">
-        <span class="capter_name">audity podláh</span>
-        <p>Aby sme splnili zakladnu podmienku v prostredi EPA potrebujeme mat vhodnu podlahu. Zakladnou
-podmienkov je primarne uzemnenia personalu v EPA prostredi. Ponukame nedesktrukivnu obnovu
-podlahoveho systemu pre vasu vyrobu a zarucuje homogenne hodnoty v ktoromkolvek meracom
-bode. Je prirodzene a bezne, ze podlaha degraduje a taktiez je prirodzene aj to aby sme sa onu starali.</p>
-        <a href="#contact" class=" general_btn btn_right">chcem viac informácií</a>
-      </div>
-      
+        <div class="spec_service_content_wraper">
+        <div class="left_side picture_size picture_flor_audit">
+          <img src="./img/floors audit.jpeg" alt="particel measurement ">
+        </div>
+        <div class="right_side esd_pausal_text card_text card_text_right">
+          <span class="capter_name">audity podláh</span>
+          <p>Aby sme splnili zakladnu podmienku v prostredi EPA potrebujeme mat vhodnu podlahu. Zakladnou
+            podmienkov je primarne uzemnenia personalu v EPA prostredi. Ponukame overovacie meranie ,za účelom auditu . Služba je obsiahnutá priamo v ESD audite linky , ale aj samostatne ak je to potrebné .</p>
+          <a href="#contact" class=" general_btn btn_right">chcem viac informácií</a>
+        </div>
+        </div>
     </section>
+
     <section class="floor_rest grid_basic " id="floor_rest">
-      <div class="right_side picture_size picture_floor_rest">
-        <img src="./img/floor treatmen.jpeg" alt="particel measurement ">
+      <div class="spec_service_content_wraper oposite">
+        <div class="right_side picture_size picture_floor_rest">
+          <img src="./img/floor treatmen.jpeg" alt="particel measurement ">
+        </div>
+        <div class="left_side floor_treat_text card_text ">
+          <span class="capter_name">obnova podhláh v EPA priestore</span>
+          <p>Aby sme splnili zakladnu podmienku v prostredi EPA potrebujeme mat vhodnu podlahu. Zakladnou
+            podmienkov je primarne uzemnenia personalu v EPA prostredi. Ponukame nedesktrukivnu obnovu
+            podlahoveho systemu pre vasu vyrobu a zarucuje homogenne hodnoty v ktoromkolvek meracom
+            bode. Je prirodzene a bezne, ze podlaha degraduje a taktiez je prirodzene aj to aby sme sa onu starali.</p>
+          <a href="#contact" class="floor_treat_btn general_btn btn_left">chcem viac informácií</a>
+          
+        </div>
       </div>
-      <div class="left_side floor_treat_text card_text ">
-        <span class="capter_name">obnova podhláh v EPA priestore</span>
-        <p>Aby sme splnili zakladnu podmienku v prostredi EPA potrebujeme mat vhodnu podlahu. Zakladnou
-podmienkov je primarne uzemnenia personalu v EPA prostredi. Ponukame nedesktrukivnu obnovu
-podlahoveho systemu pre vasu vyrobu a zarucuje homogenne hodnoty v ktoromkolvek meracom
-bode. Je prirodzene a bezne, ze podlaha degraduje a taktiez je prirodzene aj to aby sme sa onu starali.</p>
-        <a href="#contact" class="floor_treat_btn general_btn btn_left">chcem viac informácií</a>
-        
-      </div>
-      
     </section>
 
     <section class="partners grid_basic white" id="partners">
@@ -244,14 +270,14 @@ bode. Je prirodzene a bezne, ze podlaha degraduje a taktiez je prirodzene aj to 
     
     <section class="contact grid_basic " id="contact">
           <div class="contact_wraper_general">
-            <div class="right_side contact_form_right">
+            <div class=" contact_form_right">
               <div class="right_side_wraper">
               <span class="contact_capter_name2">Iné sposoby ako nás kontaktovať</span>
+              <span class="descr">odpovedáme do 48hodín</span>
               <div class="other_contact_wraper">
                 
                 <div class="basic_data">
                   <ul>
-                    <li class="descr">odpovedáme do 48hodín</li>
                     <li class="phone_number">+421 902 555 555</li>
                     <li class="adress">Watsonova 55</li>
                     <li class="social">Sociálne siete</li>
@@ -277,7 +303,7 @@ bode. Je prirodzene a bezne, ze podlaha degraduje a taktiez je prirodzene aj to 
                 </div>
             </div>
             </div>
-            <div class="left_side contact_form">
+            <div class=" contact_form contact_form_left">
               
               <span class="contact_capter_name">Napíšte nám</span>
               <form action="submit-form.php" method="post">
@@ -295,6 +321,11 @@ bode. Je prirodzene a bezne, ze podlaha degraduje a taktiez je prirodzene aj to 
                 
                 <label for="message">Správa:</label>
                 <textarea id="message" name="message" required></textarea>
+                
+                <div class="checkbox_wraper">
+                <input type="checkbox" id="checkbox" name="checkbox" required>
+                <label for="checkbox" class="checkbox">Súhlasim so <a href="#" target="_blank">spracovaním osobných údajov </a></label>
+                </div>
                 
                 <input type="submit" value="Odoslať" id="send">
               </form>

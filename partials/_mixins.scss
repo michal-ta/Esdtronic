@@ -2,6 +2,10 @@
         @return ($size/$context) +rem;
 }
 
+@function em($size, $context: 16) {
+        @return ($size/$context)+em;
+}
+
 
 @mixin pf-vars() {
 
