@@ -15,6 +15,10 @@ p,a,li,ul{
     font-family: 'Oswald', sans-serif; 
 }
 
+img{
+    width: 91%;
+}
+
 .grid_basic{
     display: grid;
     grid-template-columns: repeat(10,10vw);

@@ -107,6 +107,10 @@ p, a, li, ul {
   font-family: "Oswald", sans-serif;
 }
 
+img {
+  width: 91%;
+}
+
 .grid_basic {
   display: grid;
   grid-template-columns: repeat(10, 10vw);
@@ -880,7 +884,6 @@ form {
 
 .sub_footer {
   padding: 1.5625rem;
-  background-color: pf;
 }
 .sub_footer ul {
   display: flex;
@@ -1100,14 +1103,17 @@ form {
     padding: 1.5625rem;
   }
   .navigation_language {
-    grid-column: 6/8;
+    grid-column: 7/9;
     grid-row: 1/2;
   }
   .navigation_language a {
     width: 90%;
   }
+  .navigation_logo_wraper {
+    grid-column: 2/7;
+  }
   .navigation_buttons_burger {
-    grid-column: 9/11;
+    grid-column: 10/11;
     grid-row: 1/2;
     background: none;
     border: none;
@@ -1128,13 +1134,13 @@ form {
     transition: transform 0.55s ease-in-out, opacity 0.45s ease-in;
   }
   .navigation_buttons_burger.active .burger1 {
-    transform: rotate(45deg) translateX(62%);
+    transform: rotate(45deg) translateX(50%);
   }
   .navigation_buttons_burger.active .burger2 {
     opacity: 0;
   }
   .navigation_buttons_burger.active .burger3 {
-    transform: rotate(-45deg) translateX(62%);
+    transform: rotate(-45deg) translateX(55%);
   }
   .navigation_buttons {
     position: absolute;
@@ -1304,6 +1310,12 @@ form {
   .spec_service_content_wraper.oposite {
     flex-direction: column-reverse;
   }
+  .navigation_buttons_burger.active .burger1 {
+    transform: rotate(45deg) translateX(64%);
+  }
+  .navigation_buttons_burger.active .burger3 {
+    transform: rotate(-45deg) translateX(64%);
+  }
 }
 @media only screen and (max-width: 43.125em) {
   .partners {
@@ -1331,7 +1343,108 @@ form {
     padding-top: 1.5625em;
   }
 }
+@media only screen and (max-width: 42em) {
+  .navigation_logo h4 {
+    font-size: 1.375em;
+  }
+  .navigation_logo svg {
+    width: 10%;
+    height: 25%;
+  }
+}
+@media only screen and (max-width: 38.125em) {
+  .image_container {
+    height: 100%;
+  }
+  .overlay {
+    height: 30%;
+  }
+}
+@media only screen and (max-width: 35em) {
+  .navigation_logo {
+    width: 100%;
+  }
+  .navigation_logo h4 {
+    font-size: 1.375em;
+  }
+  .navigation_logo svg {
+    width: 20%;
+    height: 25%;
+  }
+}
+@media only screen and (max-width: 35.375em) {
+  .navigation {
+    border-bottom: 0.125em solid var(--pf-color_light_accent3);
+  }
+  .navigation .added {
+    content: "L";
+    display: block;
+    height: 15%;
+    width: 5%;
+    background-color: var(--pf-color_third_bgr);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 250;
+    clip-path: polygon(100% 0%, 49.1% 100%, 0% 0%, 48.8% 41.3%);
+    cursor: pointer;
+  }
+  .navigation_language {
+    display: none;
+    transition: top 0.85s linear;
+  }
+  .navigation_language.active {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 32%;
+    top: 102%;
+    right: -101%;
+    background: rgba(6, 65, 159, 0.88);
+  }
+  .navigation_language.active a {
+    width: 50%;
+    height: 100%;
+  }
+  .navigation_language.active a img {
+    height: auto;
+    width: 10%;
+    margin-left: 50%;
+  }
+  .navigation_buttons_burger {
+    grid-column: 9/11;
+    align-self: center;
+  }
+  .navigation_logo_wraper {
+    grid-column: 2/9;
+  }
+  .navigation_buttons_burger.active .burger1 {
+    transform: rotate(45deg) translateX(58%);
+  }
+  .navigation_buttons_burger.active .burger3 {
+    transform: rotate(-45deg) translateX(58%);
+  }
+}
 @media only screen and (max-width: 31.25em) {
+  .hero img {
+    height: 65%;
+  }
+  .services::after {
+    clip-path: polygon(0% 11%, 100% 0%, 100% 92.5%, 0% 100%);
+  }
+  #technical_clean::after {
+    clip-path: polygon(0% 7%, 100% 2%, 100% 92.5%, 0% 100%);
+  }
+  #esd_audit::after {
+    clip-path: polygon(0% 12%, 100% 0%, 100% 93.5%, 0% 100%);
+  }
+  #esd_training::after {
+    clip-path: polygon(0% 12%, 100% 1%, 100% 93.5%, 0% 100%);
+  }
+  #floor_rest::after {
+    clip-path: polygon(0% 7%, 100% 0%, 100% 93.5%, 0% 100%);
+  }
   .contact_wraper_general {
     flex-direction: column-reverse;
   }
@@ -1364,5 +1477,38 @@ form {
   }
   .descr {
     align-self: center;
+  }
+}
+@media only screen and (max-width: 27.5em) {
+  .right_side,
+  .left_side {
+    width: 100%;
+  }
+  .right_side.picture_size,
+  .left_side.picture_size {
+    width: 100%;
+  }
+  .hero .hero_buttons_wraper {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hero .hero_buttons_wraper a {
+    padding: 0.937rem 0;
+    width: 50%;
+    margin-top: 2.1875em;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .navigation_logo svg {
+    width: 15%;
+  }
+  .navigation_language.active a img {
+    width: 15%;
+  }
+  .overlay {
+    height: 45%;
+  }
+  .overlay_text {
+    font-size: 0.75em;
   }
 }/*# sourceMappingURL=style.css.map */

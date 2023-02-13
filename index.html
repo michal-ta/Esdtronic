@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     
     <script src="/JS/jquery-3.6.0.min.js"></script>
-    <script src="/js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Sofia+Sans+Extra+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -23,7 +22,7 @@
     />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <nav class="navigation grid_basic not_moved">
+  <nav class="navigation grid_basic not_moved" id="navi">
     <div class="navigation_logo_wraper">
       <div class="navigation_logo">
         <svg
@@ -55,15 +54,16 @@
         <li><a href="#contact">kontakt</a> </li>
       </ul>
     </div>
-    <button class="navigation_buttons_burger ">
+    <div class="navigation_buttons_burger ">
       <span class="burger1"></span>
       <span class="burger2"></span>
       <span class="burger3"></span>
-    </button>
+    </div>
     <div class="navigation_language">
         <a href="index.html"><img src="./img/openmoji_flag-slovakia.png" alt="slovakia flag"></a>
         <a href="index_ua.html"><img src="./img/openmoji_flag-ukraine.png" alt="ukraine flag"></a>
     </div>
+    <div class="added"></div>
   </nav>
 
   <body>
@@ -306,7 +306,7 @@
             <div class=" contact_form contact_form_left">
               
               <span class="contact_capter_name">Napíšte nám</span>
-              <form action="submit-form.php" method="post">
+              <form action="mail.php" method="post">
                 <label for="name">Meno:</label>
                 <input type="text" id="name" name="name" required >
                 
