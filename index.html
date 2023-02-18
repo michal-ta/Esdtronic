@@ -67,6 +67,23 @@
   </nav>
 
   <body>
+    <div class="big_logo">
+      <svg
+        width="104"
+        height="104"
+        viewBox="0 0 104 104"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0 104H104V0H0V104ZM4 100V4H100V100H4ZM30.7453 83.1411H75.118V65.3374H50.2733V61.6687H71.3913V44.1718H50.2733V38.9693H75.118V20.8589H30.7453V83.1411Z"
+          fill="white"
+        />
+      </svg>
+      <span class="company_name_logo ">ESDtronic s.r.o</span>
+    </div>
     <div class="logo_bgr">
       <svg
         width="104"
@@ -86,7 +103,7 @@
     <section class="hero grid_basic">
       <div class="content_wraper">
           <div class="align_wraper">
-            <div class="text_wraper">
+            <div class="text_wraper ">
               <h2>Odborné konzultácie a riešenia</h2>
               <h1>Správne fungovanie ESD prostredia</h1>
               
@@ -106,13 +123,13 @@
                 </p>
               </div>
             </div>
-            <div class="img_wraper">
+            <div class="img_wraper ">
               <div class="hero_img_section">
                 <img src="./img/PCBA.png" alt="Printed circuit board" loading="lazy">
               </div>
           </div>
           </div>
-          <div class="hero_buttons_wraper">
+          <div class="hero_buttons_wraper moving " data-delay="35s">
           <a href="#service" class="btn btn_main">Služby</a>
           <a href="#contact" class="btn btn_second">Kontakty</a>
           </div>
@@ -121,7 +138,7 @@
       </section>
       <section class="aboutme grid_basic white"id="about_me">
         <div class="content_wraper aboutme_content_wraper">
-          <div class="img_wraper">
+          <div class="img_wraper moving" data-delay="0.25s">
           <img
             src="./img/john-schnobrich-FlPc9_VocJ4-unsplash.jpg"
             alt="picture of PC "
@@ -141,7 +158,7 @@
           </div>
         </div>
       </section>
-      <section class="services grid_basic" id="service">
+      <section class="services grid_basic" data-delay="0.15s" id="service">
         <div class="wraper">
           <div class="image_container">
             <a href="#technical_clean"><img src="./img/esd pausal.jpg" alt="cleannes lever" class="service_img"></a>
@@ -168,7 +185,7 @@
           </div>
         </div>
       </section>
-      <section class="technical_clean grid_basic white" id="technical_clean">
+      <section class="technical_clean grid_basic white moving" id="technical_clean" data-delay="0s">
         <div class="spec_service_content_wraper">
           <div class="left_side picture_size picture_clean">
             <img src="./img/cleannes.jpeg" alt="particel measurement ">
@@ -182,12 +199,12 @@
         
 
       </section>
-      <section class="esd_audit grid_basic " id="esd_audit">
+      <section class="esd_audit grid_basic moving " data-delay="0s" id="esd_audit">
         <div class="spec_service_content_wraper oposite">
           <div class="right_side picture_size picture_esd_audit">
             <img src="./img/ESD audits.jpeg" alt="particel measurement ">
           </div>
-          <div class="left_side esd_audit_text card_text">
+          <div class="left_side esd_audit_text card_text moving " data-delay="0.25s">
             <span class="capter_name">ESD audit linky</span>
             <p>Statická elektrina a kontaminácia produktu idú ruka v ruke. A práve preto prepájame ESD audit a technicku čistotu v elektrotechnickom priemysle do jedného celku.  Pre našich partnerov ponúkame okrem reportu aj riešenia po audite. Pri auditoch používame štandardy noriem  <strong>IEC, ANSI, VDA 19.1-2 </strong> a v neposlednom rade vaše zákaznické požiadavky. Na vašom ESD audite začíname pracovať ešte pred stretnutim. Zastávame postoj neustáleho napredovania a možnosť implementacie systémových postupov pre vás. </p>
             <a href="#contact" class="btn_left general_btn audit_btn">chcem viac informácií</a>
@@ -196,7 +213,7 @@
         </div>
       </section>
 
-      <section class="esd_pausal grid_basic white" id="esd_pausal">
+      <section class="esd_pausal grid_basic white moving" data-delay="0s" id="esd_pausal">
         <div class="spec_service_content_wraper">
           <div class="left_side picture_size picture_pausal">
             <img src="./img/signature.png" alt="particel measurement ">
@@ -210,7 +227,7 @@
           </div>
         </div>
     </section>
-    <section class="esd_trainings grid_basic " id="esd_trainings">
+    <section class="esd_trainings grid_basic moving " data-delay="0.25s" id="esd_trainings">
       <div class="spec_service_content_wraper oposite">
         <div class="right_side picture_size picture_training">
           <img src="./img/krakenimages-376KN_ISplE-unsplash.jpg" alt="training picture ">
@@ -227,9 +244,9 @@
         </div>
       </div>
     </section>
-    <section class="floor_audit grid_basic white" id="floor_audit">
+    <section class="floor_audit grid_basic white moving" data-delay=".25s" id="floor_audit">
         <div class="spec_service_content_wraper">
-        <div class="left_side picture_size picture_flor_audit">
+        <div class="left_side picture_size picture_flor_audit moving" data-delay="0.25s">
           <img src="./img/floors audit.jpeg" alt="particel measurement ">
         </div>
         <div class="right_side esd_pausal_text card_text card_text_right">
@@ -242,11 +259,11 @@
     </section>
 
     <section class="floor_rest grid_basic " id="floor_rest">
-      <div class="spec_service_content_wraper oposite">
+      <div class="spec_service_content_wraper oposite moving" data-delay="0.25s">
         <div class="right_side picture_size picture_floor_rest">
           <img src="./img/floor treatmen.jpeg" alt="particel measurement ">
         </div>
-        <div class="left_side floor_treat_text card_text ">
+        <div class="left_side floor_treat_text card_text moving" data-delay="0.25s">
           <span class="capter_name">obnova podhláh v EPA priestore</span>
           <p>Aby sme splnili zakladnu podmienku v prostredi EPA potrebujeme mat vhodnu podlahu. Zakladnou
             podmienkov je primarne uzemnenia personalu v EPA prostredi. Ponukame nedesktrukivnu obnovu
@@ -260,7 +277,7 @@
 
     <section class="partners grid_basic white" id="partners">
       <h5>Partneri</h5>
-      <div class="partners_wraper">
+      <div class="partners_wraper moving" data-delay="0s">
       <a class="company_name" href="https://cleancert.eu/" target="_blank" rel="noopener noreferrer">Cleanliness Certification Center</a>
       <a class="company_logo" href="https://cleancert.eu/" target="_blank" rel="noopener noreferrer">
         <img src="https://cleancert.eu/wp-content/uploads/2022/10/cropped-Zalozka_O_NAS_2-192x192.jpg" alt="logo of partnes company" class="partner_logo" width="100%" height="100%" >
@@ -268,7 +285,7 @@
       </div>
     </section>
     
-    <section class="contact grid_basic " id="contact">
+    <section class="contact grid_basic moving " data-delay="0.85s" id="contact">
           <div class="contact_wraper_general">
             <div class=" contact_form_right">
               <div class="right_side_wraper">
@@ -304,17 +321,20 @@
             </div>
             </div>
             <div class=" contact_form contact_form_left">
+
+              
               
               <span class="contact_capter_name">Napíšte nám</span>
               <form action="mail.php" method="post">
+               
                 <label for="name">Meno:</label>
                 <input type="text" id="name" name="name" required >
                 
                 <label for="company">Spoločnosť:</label>
-                <input type="text" id="company" name="company">
+                <input type="text" id="company" name="company" required>
                 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email"  required>
                 
                 <label for="phone">Telefónne číslo:</label>
                 <input type="tel" id="phone" name="phone" required>
@@ -328,6 +348,7 @@
                 </div>
                 
                 <input type="submit" value="Odoslať" id="send">
+              
               </form>
             </div>
             </div>

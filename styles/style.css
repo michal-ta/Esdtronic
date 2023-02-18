@@ -161,7 +161,7 @@ li, a {
   margin: 0;
   padding: 0;
   grid-template-rows: 1fr;
-  height: 4.0625rem;
+  height: 10%;
   align-items: center;
   justify-content: space-around;
   background: rgba(6, 65, 159, 0.88);
@@ -240,6 +240,39 @@ li, a {
   margin-left: 60%;
 }
 
+.big_logo {
+  position: absolute;
+  z-index: 250;
+  background-color: var(--pf-color_brand);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: logoAnime 7s forwards ease-in-out;
+}
+.big_logo svg {
+  width: 100%;
+  height: 70%;
+}
+.big_logo span {
+  color: #fff;
+  font-size: 2.875em;
+  animation: anim1 0.95s backwards ease-in-out;
+}
+
+@keyframes logoAnime {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
 .logo_bgr svg {
   height: 70vh;
   width: 70vw;
@@ -384,9 +417,10 @@ li, a {
 }
 .aboutme_content_wraper .img_wraper {
   width: 45%;
+  padding-right: 1.5625em;
 }
 .aboutme_content_wraper .img_wraper img {
-  height: minmax(50%, 80%);
+  height: 80%;
 }
 
 .aboutme_description {
@@ -488,6 +522,10 @@ li, a {
   justify-content: space-around;
   padding: 2.8125rem 2.8125rem 2.8125rem 0;
 }
+.left_side.moved {
+  transform: translateX(-95%) translateY(-25%);
+  transition: all 0.55s ease-in-out backwards;
+}
 .left_side a {
   justify-self: flex-end;
   align-self: flex-end;
@@ -509,6 +547,10 @@ li, a {
   flex-direction: column;
   justify-content: space-around;
   padding: 2.8125rem 0rem 2.8125rem 2.8125rem;
+}
+.right_side.moved {
+  transform: translateX(95%) translateY(-25%);
+  transition: all 0.55s ease-in-out backwards;
 }
 .right_side a {
   justify-self: flex-end;
@@ -666,8 +708,8 @@ li, a {
 
 .contact {
   display: grid;
-  padding: 4.0625rem 4.0625rem 4.0625rem 0;
-  width: 80%;
+  padding: 4.0625rem 0;
+  width: 100%;
 }
 .contact.grid_basic:after {
   clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
@@ -676,10 +718,13 @@ li, a {
 }
 
 .contact_wraper_general {
-  grid-row: 2/10;
+  grid-row: 1/2;
   grid-column: 2/10;
   background-color: #d0e1fd;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
   border-radius: 0.75rem;
   width: 100%;
   height: 100%;
@@ -784,12 +829,26 @@ form {
   box-shadow: 0.125rem 0.125rem 0.3125rem var(--pf-shadow_color);
 }
 
+.form_result_wraper {
+  grid-row: 11/12;
+  grid-column: 1/3;
+  width: 100%;
+  padding-top: 1.5625em;
+}
+
+.form_result {
+  width: 100%;
+  text-align: center;
+  font-size: 0.75em;
+}
+
 .contact_form_right {
   height: 100%;
   width: 35%;
   background-color: #0859da;
   padding: 1.5625rem;
   border-radius: 0.75rem 0 0 0.75rem;
+  justify-self: flex-start;
 }
 
 .checkbox {
@@ -873,6 +932,16 @@ form {
   position: relative;
 }
 
+@keyframes anim1 {
+  from {
+    transform: translateY(55%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .footer {
   height: max-content;
   display: flex;
@@ -961,6 +1030,10 @@ form {
   }
   .right_side.picture_size {
     height: 100%;
+  }
+  .right_side.picture_size.moved {
+    transform: translateX(95%) translateY(-25%);
+    transition: all 0.55s ease-in-out backwards;
   }
   .left_side {
     height: max-content;
@@ -1052,7 +1125,7 @@ form {
 }
 @media only screen and (max-width: 59.0625em) {
   .navigation {
-    height: 7vh;
+    height: 10%;
     grid-template-rows: 1fr;
   }
   .picture_floor_rest img {
@@ -1089,6 +1162,10 @@ form {
     height: 88%;
     padding: 1.5625rem;
   }
+  .right_side.picture_size.moved {
+    transform: translateX(95%) translateY(-25%);
+    transition: all 0.55s ease-in-out backwards;
+  }
   .left_side {
     height: 100%;
     width: 50%;
@@ -1102,6 +1179,10 @@ form {
     height: 88%;
     padding: 1.5625rem;
   }
+  .left_side.picture_size.moved {
+    transform: translateX(95%) translateY(-25%);
+    transition: all 0.55s ease-in-out backwards;
+  }
   .navigation_language {
     grid-column: 7/9;
     grid-row: 1/2;
@@ -1112,45 +1193,55 @@ form {
   .navigation_logo_wraper {
     grid-column: 2/7;
   }
+  .aboutme_content_wraper .img_wraper {
+    width: 80%;
+    margin-right: 1.5625em;
+  }
   .navigation_buttons_burger {
     grid-column: 10/11;
     grid-row: 1/2;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 60%;
-    width: 50%;
+    display: block;
+    height: 25px;
+    width: 30px;
   }
   .navigation_buttons_burger span {
-    display: block;
+    top: 50%;
     height: 0.1875em;
-    width: 1.625em;
+    width: 100%;
     background: var(--pf-color_light_accent1);
     margin: auto;
-    transition: transform 0.55s ease-in-out, opacity 0.45s ease-in;
+    position: absolute;
+    transition: transform 0.3s ease-in-out, opacity 0.25s ease-in-out;
+  }
+  .navigation_buttons_burger .burger1 {
+    transform: translateY(-0.625em);
+  }
+  .navigation_buttons_burger .burger3 {
+    transform: translateY(0.625em);
   }
   .navigation_buttons_burger.active .burger1 {
-    transform: rotate(45deg) translateX(50%);
+    transform: rotateZ(-45deg);
   }
   .navigation_buttons_burger.active .burger2 {
-    opacity: 0;
+    transform: rotateZ(45deg);
   }
   .navigation_buttons_burger.active .burger3 {
-    transform: rotate(-45deg) translateX(55%);
+    opacity: 0;
   }
   .navigation_buttons {
     position: absolute;
-    top: 4.125rem;
-    left: 31.25rem;
+    top: 0;
+    left: 100vw;
     height: 98vh;
     width: 50vw;
     display: flex;
     align-items: flex-end;
     background-color: rgba(6, 65, 159, 0.7);
+    transition: left 0.45s ease-in-out;
   }
   .navigation_buttons.actived {
     top: 0;
@@ -1168,6 +1259,11 @@ form {
   .esd_audit_text,
   .floor_treat_text {
     width: 100%;
+  }
+  .left_side.picture_size.moved,
+  .right_side.picture_size.moved {
+    transform: translateX(95%) translateY(-25%);
+    transition: all 0.55s ease-in-out backwards;
   }
   .left_side.picture_size.picture_training img,
   .right_side.picture_size.picture_training img {
@@ -1273,8 +1369,10 @@ form {
   }
   .right_side.picture_size,
   .left_side.picture_size {
-    width: 60%;
+    width: 80%;
     height: 100%;
+    padding: 0;
+    margin: 0;
   }
   .right_side.picture_size.picture_training,
   .left_side.picture_size.picture_training {
@@ -1287,6 +1385,7 @@ form {
   }
   .left_side, .right_side {
     width: 80%;
+    padding: 0;
   }
   .left_side a, .left_side span, .right_side a, .right_side span {
     align-self: center;
@@ -1310,19 +1409,13 @@ form {
   .spec_service_content_wraper.oposite {
     flex-direction: column-reverse;
   }
-  .navigation_buttons_burger.active .burger1 {
-    transform: rotate(45deg) translateX(64%);
-  }
-  .navigation_buttons_burger.active .burger3 {
-    transform: rotate(-45deg) translateX(64%);
-  }
 }
 @media only screen and (max-width: 43.125em) {
   .partners {
     padding: 8.4375em;
   }
   .contact_wraper_general {
-    grid-column: 2/11;
+    grid-column: 2/10;
   }
   .basic_data ul {
     padding: 0;
@@ -1419,12 +1512,6 @@ form {
   .navigation_logo_wraper {
     grid-column: 2/9;
   }
-  .navigation_buttons_burger.active .burger1 {
-    transform: rotate(45deg) translateX(58%);
-  }
-  .navigation_buttons_burger.active .burger3 {
-    transform: rotate(-45deg) translateX(58%);
-  }
 }
 @media only screen and (max-width: 31.25em) {
   .hero img {
@@ -1437,7 +1524,7 @@ form {
     clip-path: polygon(0% 7%, 100% 2%, 100% 92.5%, 0% 100%);
   }
   #esd_audit::after {
-    clip-path: polygon(0% 12%, 100% 0%, 100% 93.5%, 0% 100%);
+    clip-path: polygon(0% 8%, 100% 0%, 100% 93.5%, 0% 100%);
   }
   #esd_training::after {
     clip-path: polygon(0% 12%, 100% 1%, 100% 93.5%, 0% 100%);
@@ -1478,6 +1565,12 @@ form {
   .descr {
     align-self: center;
   }
+  .contact {
+    padding: 0.75em;
+  }
+  .contact_wraper_general {
+    grid-column: 2/10;
+  }
 }
 @media only screen and (max-width: 27.5em) {
   .right_side,
@@ -1496,6 +1589,12 @@ form {
     padding: 0.937rem 0;
     width: 50%;
     margin-top: 2.1875em;
+  }
+  .aboutme_content_wraper .img_wraper {
+    width: 100%;
+  }
+  .aboutme_content_wraper .aboutme_description {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 23.75em) {

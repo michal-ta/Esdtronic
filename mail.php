@@ -1,10 +1,10 @@
 <?php
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'];
-    $company = $_POST['company'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $message = $_POST['message'];
+    $name =trim( $_POST['name']);
+    $company =trim( $_POST['company']);
+    $email = trim($_POST['email']);
+  $phone = trim($_POST['phone']);
+  $message =trim( $_POST['message']);
 
     if (!is_numeric($phone)) {
         echo "V telefónnom čísle sa môžu vyskytovať iba číselné znaky.";

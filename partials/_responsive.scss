@@ -75,6 +75,12 @@
 
         &.picture_size{
             height: 100%;
+
+            &.moved {
+                    transform: translateX(95%) translateY(-25%);
+                    transition: all 0.55s ease-in-out backwards;
+                }
+
             
         }
     }
@@ -130,7 +136,7 @@
 }
 
 @media only screen and   (max-width:em(1124)){
-
+    
     
     .contact_form {
             height: 100%;
@@ -227,7 +233,7 @@
 
 
     .navigation{
-        height: 7vh;
+        height: 10%;
         grid-template-rows: 1fr;
     }
     .picture_floor_rest {
@@ -285,6 +291,11 @@
                     width: 50%;
                     height: 88%;
                     padding: rem(25);
+
+                    &.moved {
+                            transform: translateX(95%) translateY(-25%);
+                            transition: all 0.55s ease-in-out backwards;
+                        }
                 }
     }
         .left_side {
@@ -299,6 +310,10 @@
                     width: 50%;
                     height: 88%;
                     padding: rem(25);
+                    &.moved {
+                            transform: translateX(95%) translateY(-25%);
+                            transition: all 0.55s ease-in-out backwards;
+                        }
                 }
         }
 
@@ -316,43 +331,56 @@
         grid-column: 2/7;
     }
 
+    .aboutme_content_wraper{
+        .img_wraper{
+        width: 80%;
+        margin-right: em(25);
+        }
+    }
+
     .navigation_buttons_burger{
         grid-column: 10/11;
         grid-row: 1/2;
         background: none;
             border: none;
             cursor: pointer;
-            padding: 10px;
+            
             position: relative;
-            display: flex;
-            flex-direction: column;
-            height: 60%;
-            width: 50%;
+            display: block;
+            
+            height: 25px;
+            width: 30px;
+            
 
 
         span{
-            display: block;
+                top: 50%;
                 height: em(3);
-                width: em(26);
+                width: 100%;
                 background: pf(color_light_accent1);
                 margin: auto;
+                position: absolute;
+                transition: transform 0.3s ease-in-out, opacity 0.25s ease-in-out;
                 
-                transition: transform 0.55s ease-in-out ,opacity 0.45s ease-in;
             }
+            .burger1{
+                transform: translateY(em(-10));
+            }
+            .burger3{
+                transform: translateY(em(10));
+            }
+            
 
         &.active{
             .burger1 {
-                    transform: rotate(45deg) translateX(50%);
-                    
+                transform: rotateZ(-45deg);
                 }
             
                 .burger2 {
-                    opacity: 0;
+                transform: rotateZ(45deg);
                 }
-            
-                .burger3 {
-                    transform: rotate(-45deg) translateX(55%);
-                    
+                .burger3{
+                    opacity: 0;
                 }
         }
                 
@@ -360,19 +388,19 @@
 
     .navigation_buttons{
         position:absolute;
-        top:rem(66);
-        left: rem(500);
+        top: 0;
+        left: 100vw;
         height: 98vh;
         width: 50vw;
         display: flex;
         align-items: flex-end;
         background-color: color_change(transparentize,color_brand,0.3);
+        transition: left 0.45s ease-in-out;
 
         &.actived{
             top: 0;
             left: 1px;
-        }
-        
+        }        
         ul{
             height: 100%;
             flex-direction: column;
@@ -394,7 +422,10 @@
     }
     .left_side.picture_size,
     .right_side.picture_size{
-        
+        &.moved {
+                transform: translateX(95%) translateY(-25%);
+                transition: all 0.55s ease-in-out backwards;
+            }
         
 
         &.picture_training {
@@ -541,8 +572,10 @@
 
                 .right_side.picture_size,
                 .left_side.picture_size {
-                    width: 60%;
+                    width: 80%;
                     height: 100%;
+                    padding: 0;
+                    margin: 0;
 
                     &.picture_training {
                         width: 80%;
@@ -557,6 +590,7 @@
                 }
     .left_side,.right_side{
         width: 80%;
+        padding: 0;
 
         a,span{
                 align-self: center;
@@ -584,14 +618,7 @@
         }
     }
 
-    .navigation_buttons_burger.active{
-        .burger1{
-            transform: rotate(45deg) translateX(64%);
-        }
-        .burger3{
-            transform: rotate(-45deg) translateX(64%);
-        }
-    }
+    
 
     
 }
@@ -602,7 +629,7 @@
     }
 
     .contact_wraper_general{
-        grid-column: 2/11;
+        grid-column: 2/10;
     }
 
     .basic_data ul{
@@ -721,15 +748,7 @@
         grid-column: 2/9;
     }
 
-        .navigation_buttons_burger.active {
-            .burger1 {
-                transform: rotate(45deg) translateX(58%);
-            }
-    
-            .burger3 {
-                transform: rotate(-45deg) translateX(58%);
-            }
-        }
+        
 
 
 }
@@ -749,7 +768,7 @@
                     clip-path: polygon(0% 7%, 100% 2%, 100% 92.5%, 0% 100%);
                 }
                 #esd_audit::after{
-                    clip-path: polygon(0% 12%, 100% 0%, 100% 93.5%, 0% 100%);
+                    clip-path: polygon(0% 8%, 100% 0%, 100% 93.5%, 0% 100%);
                 }
                 #esd_training::after{
                     clip-path: polygon(0% 12%, 100% 1%, 100% 93.5%, 0% 100%);
@@ -793,6 +812,14 @@
         .descr{
             align-self: center;
         }
+
+        .contact{
+            padding: em(12)
+        }
+
+        .contact_wraper_general{
+            grid-column: 2/10;
+        }
 }
 @media only screen and (max-width:em(440)){
 
@@ -816,6 +843,15 @@
                     width: 50%;
                     margin-top: em(35);
                 }
+            }
+        }
+
+        .aboutme_content_wraper{
+            .img_wraper{
+                width: 100%;
+            }
+            .aboutme_description{
+                width: 100%;
             }
         }
 }
