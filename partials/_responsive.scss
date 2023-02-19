@@ -561,7 +561,7 @@
         grid-template-rows: 1fr 1fr 1fr;
         height: 100%;
         gap: 1em;
-        grid-row: 2/12;
+        grid-row: 1/2;
     }
 
         .image_container {
@@ -698,7 +698,7 @@
             content: "L";
             display: block;
             height: 15%;
-            width:  5%;
+            width:  15%;
             background-color: pf(color_third_bgr);
             position: absolute;
             top: 100%;
