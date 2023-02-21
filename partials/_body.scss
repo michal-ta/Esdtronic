@@ -148,7 +148,7 @@
     font-size: 15px;
     height: max-content;
     font-weight: 500;
-    filter: drop-shadow(0px 1rem 2rem rgb(4 41 100 / 75%));
+    filter: drop-shadow(0px 1rem 2rem color_change(transparentize,shadow_color,0.75));
     
 }
 
@@ -420,7 +420,7 @@
     line-height: clamp(1.45rem, 1.79rem, 2.05rem);
     padding: rem(40);
     border-radius: rem(40) rem(40) 0 rem(75) ;
-    box-shadow: 0px 1rem 2rem rgb(4 41 100 / 75%);
+    box-shadow:0px 1rem 2rem color_change(transparentize,shadow_color,0.75);
     position: relative;
 
 
@@ -430,7 +430,7 @@
 }
 .card_text_right p{
     border-radius: rem(40) rem(40)  rem(75) 0 ;
-    box-shadow: 0px 1rem 2rem rgb(4 41 100 / 75%);
+    box-shadow:0px 1rem 2rem color_change(transparentize,shadow_color,0.75);
     position: relative;
     
 }

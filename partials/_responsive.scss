@@ -694,23 +694,7 @@
     .navigation{
         border-bottom: em(2) solid pf(color_light_accent3);
 
-        .added{
-            content: "L";
-            display: block;
-            height: 15%;
-            width:  15%;
-            background-color: pf(color_third_bgr);
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            z-index: 250;
-            clip-path: polygon(100% 0%, 49.1% 100%, 0% 0%, 48.8% 41.3%);
-            cursor: pointer;
-
-            
         }
-    }
 
     .navigation_language {
         display: none;
@@ -721,19 +705,19 @@
             position:absolute;
             display: flex;
             width: 100vw;
-            height: 32%;
+            height: 46%;
             top: 102%;
             right:-101%;
             background: color_change(transparentize, color_brand, 0.12);
             
             a{
-                width: 50%;
+                width: 80%;
                 height: 100%;
                 
 
                 img{
                     height: auto;
-                    width:10%;
+                    width:15%;
                     margin-left: 50%;
                 }
             }
@@ -819,6 +803,21 @@
 
         .contact_wraper_general{
             grid-column: 2/10;
+        }
+
+        .sub_footer{
+
+            height: 100%;
+            ul{
+                flex-direction: column;
+                align-items: center;
+                height: 80%;
+                padding: 0;
+
+                li{
+                    padding-top: em(12);
+                }
+            }
         }
 }
 @media only screen and (max-width:em(440)){
