@@ -296,6 +296,8 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 35vh 35vh;
     gap: rem(32);
+
+    
     
 }
 
@@ -304,6 +306,14 @@
     width: auto;
     position: relative;
     z-index: 4;
+    transition: all 0.45s ease-in;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+    &:not(:hover){
+        filter: grayscale(80%);
+    }
 
     img{
         display: inline-block;

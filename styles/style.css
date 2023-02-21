@@ -658,6 +658,18 @@ li, a {
   width: auto;
   position: relative;
   z-index: 4;
+  -webkit-transition: all 0.45s ease-in;
+  transition: all 0.45s ease-in;
+}
+
+.image_container:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.image_container:not(:hover) {
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
 }
 
 .image_container img {
