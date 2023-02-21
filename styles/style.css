@@ -662,12 +662,12 @@ li, a {
   transition: all 0.45s ease-in;
 }
 
-.image_container:hover {
+.image_container:hover, .image_container:focus {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.image_container:not(:hover) {
+.image_container:not(:hover), .image_container:not(:focus) {
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
 }
