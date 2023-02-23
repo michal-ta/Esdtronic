@@ -271,6 +271,7 @@ li, a {
   to {
     opacity: 0;
     display: none;
+    z-index: -2;
   }
 }
 .logo_bgr svg {
