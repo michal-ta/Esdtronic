@@ -233,7 +233,7 @@
 
 
     .navigation{
-        height: 10%;
+        height: 7%;
         grid-template-rows: 1fr;
     }
     .picture_floor_rest {
@@ -485,6 +485,8 @@
     }
 }
 
+
+
 @media only screen and (max-width:em(774)){
     .contact_form_right{
         width: 40%;
@@ -622,6 +624,8 @@
 
     
 }
+
+
 
 @media only screen and (max-width:em(690)){
     .partners{
@@ -854,6 +858,9 @@
             }
         }
 }
+
+
+
 @media only screen and (max-width:em(380)){
 
 
@@ -889,3 +896,38 @@
                 }
 }
 
+@media only screen and (max-width:em(936)) and (orientation:landscape) {
+    .grid_basic {
+        grid-template-rows: 1fr;
+        height: 100%;
+    }
+
+    .navigation {
+        height: 10%;
+    }
+
+    .hero{
+        .hero_buttons_wraper{
+            padding: em(35);
+        }
+    }
+}
+@media only screen and (max-width:em(970)) and (orientation:landscape) {
+    .grid_basic{
+        grid-template-rows: 1fr;
+    }
+    
+}
+
+
+@media only screen and (max-width:em(900)) and (orientation:landscape) {
+    .navigation {
+        height: 17%;
+    }
+}
+
+@media only screen and (max-width:em(740)) and (orientation:landscape) {
+    .navigation{
+        height: 16%;
+    }
+}
