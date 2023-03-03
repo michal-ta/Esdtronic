@@ -950,6 +950,63 @@ form {
     opacity: 1;
   }
 }
+.php_wraper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: var(--pf-color_light_accent3);
+  align-content: center;
+}
+.php_wraper h4 {
+  color: #fff;
+}
+
+.message {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  margin-top: 15%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2.1875em;
+}
+.message a {
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--pf-color_brand);
+  padding: 0.9375em 1.125em;
+  border-radius: 0.875em;
+}
+.message a:hover, .message a:focus {
+  transform: translateY(0.125em);
+}
+.message h1 {
+  color: #fff;
+  font-size: 2.1875rem;
+  padding-bottom: 2.1875em;
+}
+
+.php_nav_wraper {
+  height: 20%;
+  width: 100%;
+  display: flex;
+}
+.php_nav_wraper .logo_wraper {
+  align-items: center;
+  background-color: var(--pf-color_accent_dark);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0.75em;
+}
+.php_nav_wraper .logo_wraper svg {
+  margin-right: 1.5625em;
+}
+
 .footer {
   height: max-content;
   display: flex;
