@@ -894,7 +894,7 @@ form {
 }
 
 .social_media {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
 }
@@ -1028,6 +1028,12 @@ form {
 }
 .sub_footer li {
   padding-left: 0.9375rem;
+}
+
+.sub_footer_gover {
+  width: 100%;
+  text-align: center;
+  height: 100%;
 }
 
 .footer_author ul {

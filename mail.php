@@ -39,7 +39,7 @@
     }
 
     $to = "m.kis@esdtronic.eu";
-    $subject = "Nová správa od $name";
+    $subject = "vyplený kontaktný formulár na stránke od $name";
     $headers = "From: $email" . "\r\n";
     $headers .= "Reply-To: $email" . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
@@ -68,13 +68,6 @@
       </div>";
     }
   }
-
-  echo
-  "<div class='message'>
-      <h1 class='php_header success'>Správa bola úspešne odoslaná. Čoskoro sa vám ozveme </h1>
-      <a href='./index.html' class='php_btn'>Späť na hlavnú stránku</a>
-    </div>";
-  
   ?>
   
 
