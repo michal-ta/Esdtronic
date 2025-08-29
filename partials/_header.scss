@@ -1,7 +1,6 @@
 .navigation{
     margin:0;
-    padding: 0;
-    grid-template-rows: 1fr;
+    padding: 0 rem(35);
     height: 10%;
     align-items: center;
     justify-content: space-around;
@@ -10,6 +9,7 @@
     z-index: 250;
     backdrop-filter: blur(10px);
     min-height: 1%;
+    width: 100%;
 
     &::after{
         display: none;
@@ -27,8 +27,7 @@
 }
 
 .navigation_logo_wraper{
-    grid-column: 2/6; 
-    width: 100%;
+        width: 100%;
 }
 
 .navigation_logo{
@@ -57,9 +56,9 @@
 }
 
 .navigation_buttons{
-    grid-column: 6/9;
     width: 100%;
     justify-self: flex-start;
+    padding: 0 rem(35);
 
     
     ul{
@@ -84,11 +83,12 @@
 }
 
 .navigation_language{
-    grid-column: 9/10;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 30%;
+    height: 50%;
+    padding: 0 rem(20);
 
     a{
         
