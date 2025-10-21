@@ -1,10 +1,10 @@
 # Názov tvojho workflow
-name: Auto FTP Deploy
+name: Auto SFTP Deploy
 
 # Kedy sa workflow spustí
 on:
   push:
-    # Spustí sa, keď sa pushne na vetvu 'main' (alebo 'master')
+    # Spustí sa, keď sa pushne na vetvu 'master'
     branches: [ master ] 
     
 # Definícia pracovných úloh (jobs)
@@ -18,17 +18,24 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v4
 
-    # 2. Synchronizuje súbory na FTP server
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    # 2. Synchronizuje súbory na SFTP server
+    - name: Sync files via SFTP
+      # ZMENA: Použitie akcie, ktorá podporuje SFTP
+      uses: milanmk/actions-file-deployer@master 
       with:
-        # Použitie tajných premenných (Secrets) z kroku 1
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_LOGIN }}
-        password: ${{ secrets.FTP_PASS }}
+        # POUŽITIE PROTOKOLU SFTP
+        remote-protocol: "sftp"
         
-        # Lokálny priečinok na nahrávanie (napr. ak je kód v koreni repozitára, použi '.')
-        local-dir: './' 
+        # POUŽITIE POSKYTNUTÝCH TAJNÝCH PREMENNÝCH
+        remote-host: ${{ secrets.FTP_SERVER }}
+        remote-user: ${{ secrets.FTP_LOGIN }}
+        remote-password: ${{ secrets.FTP_PASS }}
         
-        # Vzdialený priečinok na serveri (napr. public_html/ alebo htdocs/)
-        server-dir: './subdoms/client1/'
+        # Lokálny priečinok na nahrávanie
+        local-path: './' 
+        
+        # Vzdialený priečinok na serveri
+        remote-path: './subdoms/client1/'
+        
+        # Vytvorí lokálny cache súbor, aby sa nahrávali len zmenené súbory
+        sync-file: '.sftp-deploy-sync-state.json'
