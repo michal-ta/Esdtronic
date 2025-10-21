@@ -1,0 +1,34 @@
+# Názov tvojho workflow
+name: Auto FTP Deploy
+
+# Kedy sa workflow spustí
+on:
+  push:
+    # Spustí sa, keď sa pushne na vetvu 'main' (alebo 'master')
+    branches: [ master ] 
+    
+# Definícia pracovných úloh (jobs)
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Stiahne (checkout) kód z repozitára
+    - name: Get latest code
+      uses: actions/checkout@v4
+
+    # 2. Synchronizuje súbory na FTP server
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        # Použitie tajných premenných (Secrets) z kroku 1
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_LOGIN }}
+        password: ${{ secrets.FTP_PASS }}
+        
+        # Lokálny priečinok na nahrávanie (napr. ak je kód v koreni repozitára, použi '.')
+        local-dir: './' 
+        
+        # Vzdialený priečinok na serveri (napr. public_html/ alebo htdocs/)
+        server-dir: './subdoms/client1'
