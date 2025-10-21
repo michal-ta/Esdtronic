@@ -31,4 +31,4 @@ jobs:
         local-dir: './' 
         
         # Vzdialený priečinok na serveri (napr. public_html/ alebo htdocs/)
-        server-dir: './subdoms/client1'
+        server-dir: './subdoms/client1/'
