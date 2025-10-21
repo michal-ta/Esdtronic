@@ -7,7 +7,6 @@ on:
     # Spustí sa, keď sa pushne na vetvu 'master'
     branches: [ master ] 
     
-# Definícia pracovných úloh (jobs)
 jobs:
   web-deploy:
     name: Deploy
@@ -17,25 +16,24 @@ jobs:
     # 1. Stiahne (checkout) kód z repozitára
     - name: Get latest code
       uses: actions/checkout@v4
+      with:
+        # KĽÚČOVÁ ZMENA: Stiahne celú históriu pre SFTP delta synchronizáciu
+        fetch-depth: 0 
 
     # 2. Synchronizuje súbory na SFTP server
     - name: Sync files via SFTP
-      # ZMENA: Použitie akcie, ktorá podporuje SFTP
       uses: milanmk/actions-file-deployer@master 
       with:
-        # POUŽITIE PROTOKOLU SFTP
         remote-protocol: "sftp"
-        
-        # POUŽITIE POSKYTNUTÝCH TAJNÝCH PREMENNÝCH
         remote-host: ${{ secrets.FTP_SERVER }}
         remote-user: ${{ secrets.FTP_LOGIN }}
         remote-password: ${{ secrets.FTP_PASS }}
         
-        # Lokálny priečinok na nahrávanie
         local-path: './' 
-        
-        # Vzdialený priečinok na serveri
         remote-path: './subdoms/client1/'
         
-        # Vytvorí lokálny cache súbor, aby sa nahrávali len zmenené súbory
-        sync-file: '.sftp-deploy-sync-state.json'
+        # NOVÝ PARAMETER: Použite 'sync: delta' pre nahrávanie len zmenených súborov
+        # Ak by ste chceli nahrať VŠETKY súbory, zmeňte na 'sync: full'
+        sync: 'delta' 
+        
+        # ODSTRÁNENÝ: parameter sync-file bol neplatný
