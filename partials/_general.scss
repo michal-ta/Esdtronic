@@ -1,5 +1,5 @@
-body{
-    background-color: pf(color_second_bgr);
+body {
+  background-color: pf(color_second_bgr);
 }
 h1,
 h2,
@@ -7,76 +7,38 @@ h3,
 h4,
 h5,
 h6,
-span{
-    font-family: 'Oswald', cursive;
+span {
+  font-family: "Oswald", cursive;
 }
 
-a,li,ul{
-    font-family: 'Nunito Sans', sans-serif; 
+a,
+li,
+ul {
+  font-family: "Nunito Sans", sans-serif;
 }
 
-p{
-    font-family:'Lora', sans-serif;
+p {
+  font-family: "Lora", sans-serif;
 }
 
-img{
-    width: 91%;
+img {
+  width: 91%;
 }
 
-.grid_basic{
-    display: flex;
-    padding: 0 rem(135) ;
-    margin: rem(130) 0;
-    min-width: 90%;
-    height: 100%;
-    position:relative;
-    
-
-    &::after{
-        content: "";
-        
-        height: 100%;
-        width: 100%;
-        position:absolute;
-        top: 0;
-        left: 0;
-        z-index: -2;
-        clip-path: polygon(0% 8%, 100% 0%, 100% 92.5%, 0% 100%);
-        
-        }
-    
-    
-    
-    
-    
-    &.white{
-    &::after {
-            content: "";
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            clip-path: polygon(0% 8%, 100% 0%, 100% 92.5%, 0% 100%);
-            scale: 1.1;
-            
-            
-    
-    
-        }
-    }
-   
+.grid_basic {
+  display: flex;
+  padding: 0 rem(135);
+  margin: rem(130) 0;
+  min-width: 90%;
+  height: 100%;
+  position: relative;
 }
 
-
-
-li,a{
-    text-decoration: none;
-    list-style: none;
-    
+li,
+a {
+  text-decoration: none;
+  list-style: none;
 }
-.navigation_buttons_burger{
-    display: none;
+.navigation_buttons_burger {
+  display: none;
 }
-
