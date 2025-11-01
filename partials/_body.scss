@@ -168,6 +168,11 @@
   }
 }
 
+.odrazky li{
+  //len pre UL elementy aby som zapol odrazky
+  list-style: square;
+}
+
 .btn {
   display: inline-block;
   align-self: center;
@@ -319,7 +324,6 @@
 // -----services left and right side aligment --------
 
 .spec_service_content_wraper {
-  grid-column: 2/10;
 
   display: flex;
   flex-direction: row;
@@ -327,6 +331,15 @@
   &.oposite {
     flex-direction: row-reverse;
   }
+
+  &.center{
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  width: 50%;
+  
+
+}
 }
 
 .left_side {
@@ -392,6 +405,14 @@
   }
 }
 
+
+.chapter_esd_pausal{
+justify-content: center;
+  align-content: space-around;
+  width: 50%;
+}
+
+
 .card_text p {
   height: max-content;
   background-color: color_change(lighten, color_brand, 28%);
@@ -411,6 +432,12 @@
   color: color_change(darken, color_light_accent1, 2%);
   font-size: clamp(1.25rem, 1.5rem, 2.2rem);
 }
+
+.esd_pausal_text{
+  justify-content: center;
+}
+
+
 
 .btn_right {
   position: relative;

@@ -327,18 +327,6 @@ a {
   padding-top: 0.9375rem;
 }
 
-.predelovac {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.responsive-separator {
-  height: 59x;
-  width: 90vw;
-  display: block;
-}
-
 .hero_img_section {
   height: 95%;
 }
@@ -382,6 +370,10 @@ a {
 .btn_second:hover, .btn_second:active {
   color: rgb(108.4636871508, 129.7625698324, 249.0363128492);
   border: 1.5px solid rgb(108.4636871508, 129.7625698324, 249.0363128492);
+}
+
+.odrazky li {
+  list-style: square;
 }
 
 .btn {
@@ -513,12 +505,17 @@ a {
 }
 
 .spec_service_content_wraper {
-  grid-column: 2/10;
   display: flex;
   flex-direction: row;
 }
 .spec_service_content_wraper.oposite {
   flex-direction: row-reverse;
+}
+.spec_service_content_wraper.center {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  width: 50%;
 }
 
 .left_side {
@@ -576,6 +573,12 @@ a {
   width: auto;
 }
 
+.chapter_esd_pausal {
+  justify-content: center;
+  align-content: space-around;
+  width: 50%;
+}
+
 .card_text p {
   height: -moz-max-content;
   height: max-content;
@@ -597,6 +600,10 @@ a {
 .clean_text span {
   color: rgb(191.9367588933, 143.95256917, 50.8632411067);
   font-size: 1.5rem;
+}
+
+.esd_pausal_text {
+  justify-content: center;
 }
 
 .btn_right {
