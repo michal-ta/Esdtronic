@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use 'Hero';
+@use 'nav';
+@use 'services';
+@use '_mixins' as m;
+@use 'variables.module' as v;
+@use 'Bento';
+@use 'buttons';
+@use 'split_screen';
+
+
+body{
+     margin: 0;
+     padding: 0;
+     background-color: v.$background-color;
+     color: v.$color_accent_dark;
+     overflow-x: hidden; // Zabraňuje horizontálnímu posouvání;
+     padding: m.rem(35) m.rem(60);
+     display:flex;
+     flex-direction: column;
+     font-size: 100%;
+}
+
+#content_wrapper {
+  position: relative;
+  z-index: 10;}

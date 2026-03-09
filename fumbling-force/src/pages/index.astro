@@ -1,0 +1,45 @@
+---
+import '../styles/global.scss';
+import Hero from '../components/Hero.jsx';
+import Menu from '../components/Menu.jsx';
+import AboutUs from '../components/AboutUs'; 
+import { services } from '../data/services.js';
+import { ServiceCard } from '../components/ServiceCard.jsx';
+import ServicesSection from '../components/ServiceSection.jsx';
+import SplitScreen from '../components/SplitScreen.jsx';
+---
+
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ESDtronic | Profesionálne ESD riešenia</title>
+  </head>
+  <body class="global_body">
+    
+<div id="background">
+  
+  <Menu client:load />
+  <Hero client:load />
+  <AboutUs client:load />
+
+  <section class="services_grid">
+  {services.map((service, index) => (
+    <ServiceCard 
+    client:visible 
+    title={service.title}
+    />
+  ))}
+</section>
+  <div title="Naše služby">
+  <main>
+    <h1>Prehľad všetkých služieb</h1>
+    
+    
+    <SplitScreen client:visible />
+  
+  </main>
+  </div>
+  </div>
+  </body>
+</html>

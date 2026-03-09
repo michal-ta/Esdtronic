@@ -1,0 +1,36 @@
+.hero {
+  height: 80vh; // 80% výšky obrazovky
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .container {
+    max-width: 800px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    
+    .highlight {
+      color: #0056b3; // Firemná modrá pre ESDtronic
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

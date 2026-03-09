@@ -1,0 +1,42 @@
+
+$color_accent_dark: #0C419F;
+$color_light: #dfdddd;
+$color_light_accent1: #c89635;
+$color_light_accent2: #e92223;
+$color_light_accent3: #949bdb;
+$color_second_bgr: #4f5e6d;
+$color_third_bgr: #333333;
+$color_trial: #b6831c;
+$shadow_color: #042861;
+$background-color: #F8F9FA;
+$primary-blue: #06419f;
+$accent-cyan: #00d4ff;
+$bg-light: #fbfbfb;
+$text-main: #1a1a1a;
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$primary-blue: #06419f;
+$white: #ffffff;
+$text-dark: #1a1a1a;
+$text-muted: #4a4a4a;
+
+
+export {
+  accentDark:$color_accent_dark;
+  colorLight:$color_light;
+  colorLightAccent1:$color_light_accent1;
+  colorLightAccent2:$color_light_accent2;
+  colorLightAccent3:$color_light_accent3;
+  colorSecondBgr:$color_second_bgr;
+  colorThirdBgr:$color_third_bgr;
+  colorTrial:$color_trial;
+  shadowColor:$shadow_color;
+  backgroundColor:$background-color;
+  primaryBlue:$primary-blue;
+  accentCyan:$accent-cyan;
+  bgLight:$bg-light;
+  textMain:$text-main;
+  transitionSmooth:$transition-smooth;
+  white:$white;
+  textDark:$text-dark;
+  textMuted:$text-muted;
+};

@@ -1,0 +1,81 @@
+@function rem($size, $context:16){
+        @return ($size/$context) +rem;
+}
+
+@function em($size, $context: 16) {
+        @return ($size/$context)+em;
+}
+
+
+@mixin pf-vars() {
+
+        @each $var,
+        $value in $colors {
+                #{'--pf-' + $var}: $value;
+        }
+}
+
+
+
+//function using in scss to make useable var in css. 
+@function pf($color) {
+        @return var(--pf-+$color);
+
+}
+
+// function to color manipulation without definition of map get 
+
+
+@function color_change($function,$name,$amount){
+        $valid_functions: lighten,
+                darken,
+                saturate,
+                desaturate,
+                grayscale,
+                complement,
+                transparentize;
+        $color:map-get($colors,$name);
+        @if index($valid_functions,$function){
+        @return call($function,$color,$amount);
+        }@else{
+                @warn "invalid function";
+        }
+}
+
+
+
+@mixin parallax-svg($svg-path, $overlay-opacity: 0.3) {
+  position: relative;
+  overflow: hidden;
+  
+  // VRSTVA 1: Pozadie (Parallax)
+  &::before {
+    content: "";
+    position: fixed; // Fixné voči oknu
+    top: -12.5%;
+    left: -12.5%;
+    width: 125%; // Rodič + 25%
+    height: 125%;
+    
+    background-image: url($svg-path);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    z-index: -2; // Úplne naspodu
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  // VRSTVA 2: Overlay (Prekrytie pre čitateľnosť)
+  &::after {
+    content: "";
+    position: absolute; // Fixné voči rodičovi, nie oknu
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, $overlay-opacity);
+    z-index: -1; // Medzi pozadím a textom
+  }
+}

@@ -1,0 +1,57 @@
+@use 'mixins' as m;
+@use 'variables.module' as v;
+
+.nav_buttons{
+     display: flex;
+     gap: 35%;
+     width: 60%;
+     font-size: m.rem(18);
+     color: v.$color_light;}
+
+.menu-button{
+     padding: 0.5rem 1rem;
+     cursor: pointer;
+     font-weight: bold;
+     justify-content: center;
+     align-items: center;
+     justify-items: auto;
+     background-color: transparent;
+     color: v.$color_light;
+     text-decoration: none;
+     border: none;
+    
+      // Plynulý přechod pro hover efekt
+}
+
+.navigation{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem 2rem;
+     background-color: v.$color_accent_dark;
+     position: fixed;
+     width: 100%;
+     padding: 0 m.rem(60);
+     top: 0;
+     left: 0;
+     z-index: 1000; // Zajišťuje, že navigace bude vždy nahoře
+}
+
+.logo{
+     display: flex;
+     align-items: center;
+     gap: m.rem(35); // Mezera mezi logem a textem
+     height: 10vh;
+     width: 20%;
+     
+     & img{
+          height: 65%;
+          width: auto;
+          flex-shrink: 0;
+     }
+
+     & span{
+          color: v.$color_light;
+          font-size: m.rem(45);
+     }
+}
