@@ -21,23 +21,27 @@ import SplitScreen from '../components/SplitScreen.jsx';
   
   <Menu client:load />
   <Hero client:load />
-  <AboutUs client:load />
+  <AboutUs client:visible  id="about"/>
 
-  <section class="services_grid">
-  {services.map((service, index) => (
-    <ServiceCard 
-    client:visible 
-    title={service.title}
-    />
-  ))}
+  <section class="services_grid_section"id="services">
+    <h2>Naše služby</h2>
+  <div class="bento-grid">
+    {services.map((service, index) => (
+      <ServiceCard 
+        client:visible
+        index={index}
+        title={service.title}
+        image={service.image_grid}
+        bentoClass={service.bentoClass}
+        slug={service.slug}
+      />
+    ))}
+  </div>
 </section>
   <div title="Naše služby">
   <main>
-    <h1>Prehľad všetkých služieb</h1>
-    
-    
+    <h2>Prehľad všetkých služieb</h2>
     <SplitScreen client:visible />
-  
   </main>
   </div>
   </div>

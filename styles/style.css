@@ -88,7 +88,7 @@ li {
   --pf-color_second_bgr: #4f5e6d;
   --pf-color_third_bgr: #333333;
   --pf-color_trial: #b6831c;
-  --pf-shadow_color: #042862;
+  --pf-shadow_color: #042861;
 }
 
 body {
@@ -147,8 +147,7 @@ a {
   background: rgba(6, 65, 159, 0.88);
   position: fixed;
   z-index: 250;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   min-height: 1%;
   width: 100%;
 }
@@ -347,7 +346,7 @@ a {
   height: -moz-max-content;
   height: max-content;
   font-weight: 500;
-  filter: drop-shadow(0px 1rem 2rem rgba(4, 40, 98, 0.25));
+  filter: drop-shadow(0px 1rem 2rem rgba(4, 40, 97, 0.25));
 }
 
 .btn_main {
@@ -587,13 +586,13 @@ a {
   line-height: 1.79rem;
   padding: 2.5rem;
   border-radius: 2.5rem 2.5rem 0 4.6875rem;
-  box-shadow: 0px 1rem 2rem rgba(4, 40, 98, 0.25);
+  box-shadow: 0px 1rem 2rem rgba(4, 40, 97, 0.25);
   position: relative;
 }
 
 .card_text_right p {
   border-radius: 2.5rem 2.5rem 4.6875rem 0;
-  box-shadow: 0px 1rem 2rem rgba(4, 40, 98, 0.25);
+  box-shadow: 0px 1rem 2rem rgba(4, 40, 97, 0.25);
   position: relative;
 }
 

@@ -4,14 +4,60 @@ import { motion } from 'framer-motion';
 const AboutUs = () => {
      return (
           <motion.section id="about" className="about-us-section" >
-               <h2 className="text-3xl font-bold mb-4">O nás</h2>
-               <p className="text-lg mb-6">
-                    Sme Slovenskou spoločnosťou pôsobiacou na Slovenskom a zahraničnom trhu. Naši nadšenci pre ESD začali vnímať a implementovať prvky antistatickej ochrany pred elektrostatickým výbojom ESD v spojení prvkov technickej čistoty podla VDA 19.1-2. Zákazníka berieme, ako svojho partnera, a preto korektnosť, a transparentnosť voči partnerom je pre nás kľúčová</p>
-               <p className="text-lg mb-6">
-                    ESDtronic si do svojho vzniku doniesol 10rocnu skúsenosť v problematike ESD a od roku 2017 prišlo k poznaniu, ze ESD a prienik na technickú čistotu je cesta pre bezpečne EPA prostredie. Pri riešení problematiky ESD ochrany pracujeme podla štandardov ANSI/ESD S20.20, radu noriem IEC 61340</p>
-                    
+           <header class="about-header">
+      <h2>
+        Od expertov na ESD k lídrom v technickej čistote
+      </h2>
+      <p class="about-intro">
+        Sme slovenská spoločnosť s 10-ročnou tradíciou. V ESDtronic spájame dva kľúčové svety, 
+        ktoré sa doteraz vnímali oddelene. Veríme, že skutočne bezpečné EPA prostredie vzniká 
+        až <strong>prienikom ESD ochrany a technickej čistoty.</strong>
+      </p>
+    </header>
+     <h3> Naše  základné hodnoty a princípy</h3>
+    <div class="about-pillars">
+      
+      <article class="pillar-card">
+        <div class="pillar-icon icon-ground"></div>
+        <div class="pillar-content">
+          <h3>ESD Expertíza</h3>
+          <p>
+            Pracujeme podľa najprísnejších globálnych štandardov, ktoré zaručujú 
+            stabilitu vašich elektronických procesov.
+          </p>
+          <div class="norm-badges">
+            <span class="badge">ANSI/ESD S20.20</span>
+            <span class="badge">IEC 61340</span>
+          </div>
+        </div>
+      </article>
 
-          </motion.section>
+      <article class="pillar-card">
+        <div class="pillar-icon icon-atom"></div>
+        <div class="pillar-content">
+          <h3>Technická čistota</h3>
+          <p>
+            Od roku 2017 implementujeme prvky čistoty, ktoré eliminujú mikroskopické 
+            nečistoty ohrozujúce integritu vašej výroby.
+          </p>
+          <div class="norm-badges">
+            <span class="badge">VDA 19.1-2</span>
+          </div>
+        </div>
+      </article>
+      
+    </div>
+
+    <footer class="about-footer">
+      <blockquote class="partner-quote">
+        "Zákazníka vnímame ako partnera. Transparentnosť a korektnosť sú pre nás kľúčové hodnoty, na ktorých staviame každý spoločný projekt."
+      </blockquote>
+      
+    </footer>
+    <a href="#kontakt" class="btn-primary btn_about">
+        Získajte odborný audit
+      </a>
+</motion.section>
      );
 }
 

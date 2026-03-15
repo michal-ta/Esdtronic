@@ -7,7 +7,8 @@ export const services = [
      image_detail: "/images/audit_detail.svg",
 
      fullText: " Pre našich partnerov ponúkame okrem report aj riešenia po audite. Pri auditoch používame štandardy noriem IEC, ANSI, VDA 19.1-2 a v neposlednom rade vaše zákaznícke požiadavky. Na vašom ESD audite začíname pracovať ešte pred stretnutím. Zastávame postoj neustáleho napredovania a možnosť implementácie systémových postupov pre vás.",
-     features: ["Meranie podláh", "Kontrola náramkov", "Certifikát"]
+     features: ["Meranie podláh", "Kontrola náramkov", "Certifikát"],
+     bentoClass:"tall-service"
 },  
 {
      slug: "techincka-cistota", // Toto bude v URL: esdtronic.eu/sluzby/esd-audit
@@ -17,7 +18,19 @@ export const services = [
      image_detail: "/images/audit_detail.svg",
      fullText: " Garantujeme profesionálne meranie, pravidelne kalibrovanými prístrojmi. Ak sa jedná o špeciálnu požiadavku od Vášho zákazníka, alebo len meranie pre Vašu informáciu, je našou prioritou poskytnúť relevantné a reálne údaje. Súčasťou tejto služby je aj finálna správa, ktorú budete môcť použiť, ako evidenciu počas zákazníckych, certifikačných, ale aj k iným typom auditov.",
      features: ["Meranie podláh", "Kontrola náramkov", "Certifikát"],
-     butonLink:"chcem spĺnať požiadavku na technickú čistotu"
+     butonLink:"chcem spĺnať požiadavku na technickú čistotu",
+     bentoClass:"wide-service"
+},
+{
+   slug: "skolenia", // Toto bude v URL: esdtronic.eu/sluzby/esd-audit
+     title: "Školenia ESD a technickej čistoty",
+     description: "Vaši zamestnaci netušia, čo je to ESD ? Školenia na mieru su tu pre vás !",
+     image_grid: "/img/esd pausal.jpg",
+
+     image_detail: "/images/audit_detail.svg",
+     fullText: "Ponúkame špecializované školenia, ktoré prepájajú ESD a technickú čistotu do jedného celku. V oboch prípadoch školenie je to spojene s poradenstvom aj po školení. Školenie ponúka rokmi overené informácie usporiadané do logických celkov a súvislostí. Obsahom školenia je aj školiaci materiál ku ktorému sa môžete vrátiť v prípade potreby.",
+     features: ["Meranie podláh", "Kontrola náramkov", "Certifikát"],
+     bentoClass:"tall-service"
 },
 {
      slug: "esd-pausal", 
@@ -44,18 +57,10 @@ export const services = [
 "Minimalizácia rizika reklamácií a poškodenia komponentov",
 "Úspora nákladov oproti jednorazovým meraniam alebo opravám"],
 
-     features: ["požiadavky zákazníka", "Technická čistota", "Certifikát"]
+     features: ["požiadavky zákazníka", "Technická čistota", "Certifikát"],
+     bentoClass:"main-service"
 },
-{
-   slug: "skolenia", // Toto bude v URL: esdtronic.eu/sluzby/esd-audit
-     title: "Školenia ESD a technickej čistoty",
-     description: "Vaši zamestnaci netušia, čo je to ESD ? Školenia na mieru su tu pre vás !",
-     image_grid: "/img/esd pausal.jpg",
 
-     image_detail: "/images/audit_detail.svg",
-     fullText: "Ponúkame špecializované školenia, ktoré prepájajú ESD a technickú čistotu do jedného celku. V oboch prípadoch školenie je to spojene s poradenstvom aj po školení. Školenie ponúka rokmi overené informácie usporiadané do logických celkov a súvislostí. Obsahom školenia je aj školiaci materiál ku ktorému sa môžete vrátiť v prípade potreby.",
-     features: ["Meranie podláh", "Kontrola náramkov", "Certifikát"]
-},
 {
    slug: "meranie-esd-podlah", // Toto bude v URL: esdtronic.eu/sluzby/esd-audit
      title: "Meranie ESD podláh",

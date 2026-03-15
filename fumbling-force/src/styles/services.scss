@@ -1,13 +1,20 @@
 @use 'variables.module' as v;
 @use 'mixins' as m;
 
-.services_grid {
+.bento_grid{
   display: grid;
   // Automaticky vytvorí stĺpce podľa šírky displeja (min 300px)
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: m.rem(30);
-  padding: m.rem(50) m.rem(20);
 }
+
+.services_grid_section{
+  padding: m.rem(50) m.rem(20);
+  background-color: v.$background_color;
+  text-align: center;
+
+}
+
 
 .service-card {
   background: v.$color_light;

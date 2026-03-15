@@ -1,19 +1,22 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { services } from '../data/services.js';
-import colorsVars from '../styles/variables.module.scss';
+import colorsVars from '../styles/_variables.module.scss';
 
 const ServiceRow = ({ service, onInView }) => {
-  const rowRef = useRef(null);
-  const isInView = useInView(rowRef, { amount: 0.3 });
+  // FIX: Používame len jeden hook a jednu referenciu pre inView detekciu
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "-50% 0px -50% 0px" // Detekuje stred obrazovky
+  });
 
   useEffect(() => {
-    if (isInView) {
+    if (inView) {
       onInView(service.title);
     }
-  }, [isInView, service.title, onInView]);
+  }, [inView, service.title, onInView]);
 
-  // FUNKCIA PRESUNUTÁ SEM, ABY MALA PRÍSTUP K 'service'
   const renderDynamicLists = () => {
     const lists = [];
     for (let i = 1; i <= 5; i++) {
@@ -39,7 +42,8 @@ const ServiceRow = ({ service, onInView }) => {
   };
 
   return (
-    <section ref={rowRef} className="service-row">
+    // FIX: Priradený správny ref z useInView
+    <section ref={ref} className="service-row" id={service.slug}>
       <div className="service-content">
         <h2 className="service-title">{service.title}</h2>
         <p className="service-description">{service.description}</p>
@@ -49,7 +53,7 @@ const ServiceRow = ({ service, onInView }) => {
           {renderDynamicLists()}
         </div>
         
-        <a href='#contact_form' className="contact-link">{service.butonLink ||"chcem viac informáci"}</a>
+        <a href='#contact_form' className="contact-link">{service.butonLink || "chcem viac informáci"}</a>
       </div>
     </section>
   );
@@ -66,33 +70,32 @@ const SplitScreenSection = () => {
 
   const bgColor = useTransform(
     scrollYProgress,
-    [0, 0.5, 1],
-    [colorsVars.bgLight, colorsVars.primaryBlue, colorsVars.shadowColor]
+    [0,0.55, 1],
+    [colorsVars.white, colorsVars.accent_dark, colorsVars.shadow_color]
   );
 
   const textColor = useTransform(
     scrollYProgress,
-    [0, 0.2, 1],
-    [colorsVars.primaryBlue, colorsVars.white, colorsVars.textMuted]
+    [0,0.50, 1],
+    [colorsVars.shadow_color, colorsVars.accent_dark,colorsVars.white]
   );
 
   const subtitleColor = useTransform(
+
     scrollYProgress,
-    [0, 0.2, 1],
-    [colorsVars.primaryBlue, colorsVars.textDark, colorsVars.textMuted]
+     [0,0.50, 1],
+    [colorsVars.shadow_color, colorsVars.accent_dark,colorsVars.white]
   );
 
-  
   return (
     <div ref={containerRef} className="splitscreen-container">
       <motion.div 
         style={{ backgroundColor: bgColor }}
         className="sticky-panel"
       >
-        console.log(colorsVars.primaryBlue);")
         <div className="visual-wrapper">
           <motion.div
-            key={displayText}
+            key={displayText} // Zabezpečí animáciu pri zmene textu
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

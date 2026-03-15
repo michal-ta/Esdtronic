@@ -32,15 +32,16 @@ export default function Hero() {
           Komplexné audity, merania a certifikácie podľa noriem VDA a IEC.
         </motion.p>
 
-        <motion.button
+        <motion.a
           whileHover={{ scale: 1.05 }} // Pri prejdení myšou sa jemne zväčší
           whileTap={{ scale: 0.95 }}  // Pri kliknutí sa jemne zmenší
           className="cta-button"
           onMouseEnter={handleMouseEnter} 
           onMouseLeave={handleMouseLeave}
+          href='#services'
         >
           Naše služby
-        </motion.button>
+        </motion.a>
       </div>
     </section>
   );

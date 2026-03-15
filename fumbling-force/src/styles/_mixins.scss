@@ -1,3 +1,7 @@
+@use 'variables.module' as v;
+
+
+
 @function rem($size, $context:16){
         @return ($size/$context) +rem;
 }
@@ -26,20 +30,23 @@
 // function to color manipulation without definition of map get 
 
 
-@function color_change($function,$name,$amount){
-        $valid_functions: lighten,
-                darken,
-                saturate,
-                desaturate,
-                grayscale,
-                complement,
-                transparentize;
-        $color:map-get($colors,$name);
-        @if index($valid_functions,$function){
-        @return call($function,$color,$amount);
-        }@else{
-                @warn "invalid function";
-        }
+@function color_change($function, $name, $amount) {
+    $valid_functions: lighten, darken, saturate, desaturate, grayscale, complement, transparentize;
+
+    // FIX: Prístup k mape cez alias 'vars'
+    $color: map-get(v.$colors, $name);
+
+    @if $color == null {
+        @warn "Farba s názvom '#{$name}' nebola nájdená v mape $colors.";
+        @return #fafafa; // Vrátime krikľavú farbu, aby si videl chybu vizuálne
+    }
+
+    @if index($valid_functions, $function) {
+        @return call($function, $color, $amount);
+    } @else {
+        @warn "Neplatná funkcia: #{$function}";
+        @return $color;
+    }
 }
 
 

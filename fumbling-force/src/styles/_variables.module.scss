@@ -1,0 +1,50 @@
+
+$color_accent_dark: #0C419F;
+$color_light: #dfdddd;
+$color_light_accent1: #c89635;
+$color_light_accent2: #e92223;
+$color_light_accent3: #949bdb;
+$color_second_bgr: #4f5e6d;
+$color_third_bgr: #333333;
+$color_trial: #b6831c;
+$shadow_color: #042861;
+$background-color: #F8F9FA;
+$primary-blue: #06419f;
+$accent-cyan: #00d4ff;
+$bg-light: #fbfbfb;
+$text-main: #1a1a1a;
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$primary-blue: #06419f;
+$white: #ffffff;
+$text-dark: #1a1a1a;
+$text-muted: #4a4a4a;
+
+// Map of colors for CSS variable generation
+$colors: (
+  "accent_dark": $color_accent_dark,
+  "light": $color_light,
+  "light_accent1": $color_light_accent1,
+  "light_accent2": $color_light_accent2,
+  "light_accent3": $color_light_accent3,
+  "second_bgr": $color_second_bgr,
+  "third_bgr": $color_third_bgr,
+  "trial": $color_trial,
+  "shadow_color": $shadow_color,
+  "background_color": $background-color,
+  "primary_blue": $primary-blue,
+  "accent_cyan": $accent-cyan,
+  "bg_light": $bg-light,
+  "text_main": $text-main,
+  "white": $white,
+  "text_dark": $text-dark,
+  "text_muted": $text-muted
+);
+
+// Mixin to generate CSS variables from colors to JS usage
+
+:export {
+  @each $name, $value in $colors {
+    // Premení názov (napr. accent_dark) na kľúč v JS objekte
+    #{$name}: #{$value};
+  }
+}

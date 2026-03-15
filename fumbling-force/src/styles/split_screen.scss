@@ -1,9 +1,14 @@
 @use 'variables.module' as v;
+@use 'mixins' as m;
+
+
+
 
 .splitscreen-container {
   display: flex;
   position: relative;
   width: 100%;
+ 
 
   .sticky-panel {
     position: sticky;
@@ -29,6 +34,7 @@
       font-weight: 900;
       line-height: 1.1;
       margin-bottom: 1rem;
+
     }
 
     .panel-subtitle {
@@ -96,6 +102,25 @@
   }
 }
 
+.contact-link {
+  position: relative;
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: m.rem(12, 16) m.rem(25, 16);
+  color: v.$color_light_accent1;
+  border: 1px solid v.$color_light_accent1;
+  border-radius: m.rem(12, 16);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease; // Animujeme len farbu textu
+
+ 
+
+  &:hover {
+    color: m.color_change(darken, "light_accent1", 18%);
+    border: 1px solid m.color_change(darken, "light_accent1", 15%);
+  }
+}
 // Mobile fallback
 @media (max-width: 1024px) {
   .splitscreen-container {
@@ -115,3 +140,5 @@
     }
   }
 }
+
+

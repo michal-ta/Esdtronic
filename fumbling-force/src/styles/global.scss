@@ -7,13 +7,21 @@
 @use 'Bento';
 @use 'buttons';
 @use 'split_screen';
+@use 'aboutus';
 
+
+[id]{
+  scroll-margin-top: 100px; // Upravte hodnotu podle výšky vaší navigace
+}
+html {
+  scroll-behavior: smooth;
+}
 
 body{
      margin: 0;
      padding: 0;
      background-color: v.$background-color;
-     color: v.$color_accent_dark;
+     color: v.$text-main;
      overflow-x: hidden; // Zabraňuje horizontálnímu posouvání;
      padding: m.rem(35) m.rem(60);
      display:flex;
@@ -24,3 +32,37 @@ body{
 #content_wrapper {
   position: relative;
   z-index: 10;}
+
+
+  h2:not(.panel-main-title) {
+    font-size: 2.5rem;
+    color: v.$text_main;
+    padding: m.rem(40);
+    text-align: center;
+
+    &:after{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1.25px;
+          background-color: m.color-change(transparentize, light_accent1,0.6);
+          margin: m.rem(20) auto 0; // Umístí čáru pod nadpis a centrování
+    }
+  }
+
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: v.$primary_blue;
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: m.color_change(darken,primary_blue, 0.5);
+      box-shadow: 0 8px 20px m.color_change(transparentize,primary_blue, 0.7);
+    }
+  }

@@ -10,20 +10,61 @@
   margin: 0 auto;
 
   .bento-item {
-    background: #ffffff;
-    border: 1px solid rgba(6, 65, 159, 0.1);
-    border-radius: 24px;
-    padding: 2rem;
-    transition: v.$transition-smooth;
-    overflow: hidden;
-    position: relative;
+  position: relative; // Základ pre vrstvenie
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; // Text posunieme nadol
+  padding: 1.5rem;
+  border-radius: 24px;
+  overflow: hidden; // Oreže obrázok podľa border-radiusu
+  background: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.05);
 
-    &:hover {
-      border-color: v.$primary-blue;
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  .service-image {
+    position: absolute; // Obrázok je "pod" textom
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Vyplní plochu bez deformácie
+    }
+
+    // Pridáme stmavenie, aby bol biely text čitateľný
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
     }
   }
+
+  .service-info {
+    position: relative;
+    z-index: 2; // Text je nad obrázkom aj overlayom
+    
+    h3 {
+      color: #ffffff; // Biely text na tmavom pozadí obrázka
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+
+  // Efekt pri hoveri
+  &:hover .service-image img {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+  }
+}
 
   // Definícia veľkostí
   .main-service { grid-column: span 2; grid-row: span 2; }
