@@ -7,6 +7,9 @@ import { services } from '../data/services.js';
 import { ServiceCard } from '../components/ServiceCard.jsx';
 import ServicesSection from '../components/ServiceSection.jsx';
 import SplitScreen from '../components/SplitScreen.jsx';
+import {  LogoSlider  } from '../components/slider.jsx';
+import { ContactSection} from '../components/ContactSection.jsx';
+import {  Footer  } from '../components/Footer.jsx';
 ---
 
 
@@ -21,6 +24,7 @@ import SplitScreen from '../components/SplitScreen.jsx';
   
   <Menu client:load />
   <Hero client:load />
+  <LogoSlider client:visible />
   <AboutUs client:visible  id="about"/>
 
   <section class="services_grid_section"id="services">
@@ -44,6 +48,9 @@ import SplitScreen from '../components/SplitScreen.jsx';
     <SplitScreen client:visible />
   </main>
   </div>
+
+  <ContactSection client:visible />
+  <Footer clinet:visible/>
   </div>
   </body>
 </html>

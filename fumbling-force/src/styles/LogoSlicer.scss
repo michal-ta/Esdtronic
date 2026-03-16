@@ -1,0 +1,101 @@
+@use "variables.module" as v;
+
+.logo-slider-container {
+  padding: 6rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; // Dôležité, aby slider nevytváral horizontálny scrollbar
+  background-color: #ffffff;
+
+  .slider-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    margin-bottom: 3rem;
+    font-weight: 600;
+  }
+}
+
+.logo-track-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  
+  // Fade efekt na okrajoch, aby logá plynule mizli
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, transparent);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, transparent);
+  }
+}
+
+.logo-track {
+  display: flex;
+  width: calc(250px * 12); // Šírka položky * počet všetkých log v poli
+  animation: scrollLogos 130s linear infinite; // Pomalý, plynulý pohyb
+  gap: 4rem;
+  align-items: center;
+
+  &:hover {
+    animation-play-state: paused; // Slider sa pri hoveri zastaví pre lepšiu interakciu
+  }
+}
+
+.logo-item {
+  width: 180px; // Fixná šírka kontajnera pre logo
+  height: 80px; // Fixná výška kontajnera
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; // LOGIKA: Logo vyplní priestor bez deformácie
+    filter: grayscale(100%); // Minimalistický vzhľad
+    opacity: 0.6;
+    transition: all 0.3s ease;
+
+    &:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    // Posun o polovicu celkovej šírky (keďže sme pole zdvojnásobili)
+    transform: translateX(calc(-180px * 6 - 4rem * 6));
+  }
+}
+
+// Responzivita
+@media (max-width: 768px) {
+  .logo-item {
+    width: 140px;
+    height: 60px;
+  }
+}
